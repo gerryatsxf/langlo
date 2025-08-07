@@ -13,25 +13,25 @@
     <div class="app-layout">
         <!-- Stats Sidebar -->
         <div class="stats-sidebar">
-            <div class="stats-header">Statistics</div>
+            <div class="stats-header" data-translate="statistics">Statistics</div>
             
             <div class="stats-list" id="statsList">
                 <!-- Statistics will be populated dynamically by JavaScript -->
             </div>
             
-            <button class="download-stats-button" id="downloadStatsBtn">📥 Download Statistics</button>
+            <button class="download-stats-button" id="downloadStatsBtn" data-translate="download-stats">📥 Download Statistics</button>
         </div>
 
         <div class="container">
             <div class="language-toggle" style="text-align: right;">
                 <button class="language-button" id="languageToggle">🇺🇸 EN</button>
-                <button class="reset-button" id="resetBtn" >🔄 Reset</button>
+                <button class="reset-button" id="resetBtn" data-translate="reset">🔄 Reset</button>
                 <button class="flip-direction-button" id="flipDirectionBtn">🇺🇸 → 🇯🇵</button>
             </div>
         
             <div class="header">
-                <h1 data-i18n="title">🎌 Japanese Vocabulary Cards</h1>
-                <p data-i18n="subtitle">Learn Japanese vocabulary with interactive flashcards</p>
+                <h1 data-translate="title">🎌 Japanese Vocabulary Cards</h1>
+                <p data-translate="subtitle">Learn Japanese vocabulary with interactive flashcards</p>
             </div>
 
             <div class="card-container">
@@ -46,26 +46,26 @@
                         <div class="english" id="english">Loading...</div>
                     </div>
                 </div>
-                <div class="card-hint" data-i18n="click-to-flip">Click to flip</div>
+                <div class="card-hint" data-translate="click-to-flip">Click to flip</div>
             </div>
 
             <div class="controls">
-                <button class="btn btn-secondary" id="prevBtn" data-i18n="previous">← Previous</button>
-                <button class="btn btn-primary" id="flipBtn" data-i18n="flip-card">Flip Card</button>
-                <button class="btn btn-secondary" id="nextBtn" data-i18n="next">Next →</button>
+                <button class="btn btn-secondary" id="prevBtn" data-translate="previous">← Previous</button>
+                <button class="btn btn-primary" id="flipBtn" data-translate="flip-card">Flip Card</button>
+                <button class="btn btn-secondary" id="nextBtn" data-translate="next">Next →</button>
             </div>
 
             <div class="controls" style="margin-top: 15px;">
-                <button class="btn btn-success" id="shuffleBtn" data-i18n="shuffle">🔀 Shuffle</button>
+                <button class="btn btn-success" id="shuffleBtn" data-translate="shuffle">🔀 Shuffle</button>
             </div>
 
             <div class="controls" style="margin-top: 15px;">
-                <button class="btn btn-correct" id="correctBtn" data-i18n="correct">✓ Correct</button>
-                <button class="btn btn-incorrect" id="incorrectBtn" data-i18n="incorrect">✗ Incorrect</button>
+                <button class="btn btn-correct" id="correctBtn" data-translate="correct">✓ Correct</button>
+                <button class="btn btn-incorrect" id="incorrectBtn" data-translate="incorrect">✗ Incorrect</button>
             </div>
 
             <div class="progress">
-                <div><span data-i18n="card">Card</span> <span id="currentCard">1</span> <span data-i18n="of">of</span> <span id="totalCards">12</span></div>
+                <div><span data-translate="card">Card</span> <span id="currentCard">1</span> <span data-translate="of">of</span> <span id="totalCards">12</span></div>
                 <div class="progress-bar">
                     <div class="progress-fill" id="progressFill"></div>
                 </div>
@@ -74,11 +74,11 @@
 
         <!-- Category Sidebar -->
         <div class="category-sidebar">
-            <div class="category-header">Categories</div>
+            <div class="category-header" data-translate="categories">Categories</div>
             
             <div class="category-controls">
-                <button class="btn-category btn-all" id="selectAllBtn">All</button>
-                <button class="btn-category btn-none" id="selectNoneBtn">None</button>
+                <button class="btn-category btn-all" id="selectAllBtn" data-translate="select-all">All</button>
+                <button class="btn-category btn-none" id="selectNoneBtn" data-translate="select-none">None</button>
             </div>
             
             <div class="category-list" id="categoryList">

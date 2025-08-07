@@ -479,6 +479,9 @@ body {
     font-size: 2.5rem;
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .header p {
@@ -628,6 +631,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     box-sizing: border-box;
+    line-height: 1.2;
 }
 
 .btn-primary {
@@ -666,12 +670,16 @@ body {
     width: 140px;
     min-width: 140px;
     max-width: 140px;
+    font-size: 0.9rem;
+    padding: 12px 20px;
 }
 
 .controls .btn-primary {
     width: 160px;
     min-width: 160px;
     max-width: 160px;
+    font-size: 0.9rem;
+    padding: 12px 20px;
 }
 
 /* Flip direction button specific styling */
@@ -775,8 +783,29 @@ body {
         min-width: 50px;
     }
     
+    .controls .btn-secondary, 
+    .controls .btn-skip {
+        width: 120px;
+        min-width: 120px;
+        max-width: 120px;
+        font-size: 0.8rem;
+        padding: 10px 15px;
+    }
+
+    .controls .btn-primary {
+        width: 140px;
+        min-width: 140px;
+        max-width: 140px;
+        font-size: 0.8rem;
+        padding: 10px 15px;
+    }
+    
     .header h1 {
         font-size: 2rem;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: unset;
+        line-height: 1.2;
     }
     
     .card-front, .card-back {

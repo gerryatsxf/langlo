@@ -60,17 +60,28 @@ class VocabularyCards {
                 'total': 'Total',
                 'answered': 'Answered',
                 'remaining': 'Remaining',
-                'skipped': 'Skipped'
+                'skipped': 'Skipped',
+                'progress': 'Progress',
+                // Status markers
+                'to-guess': 'To Guess',
+                'status-correct': 'Correct',
+                'status-incorrect': 'Incorrect',
+                'status-skipped': 'Skipped',
+                // Button translations
+                'download-stats': '📥 Download Statistics',
+                'downloaded': '✓ Downloaded!',
+                'reset': '🔄 Reset',
+                'reset-done': '✓ Reset!'
             },
             es: {
-                'title': '🎌 Tarjetas de Vocabulario Japonés',
+                'title': '🎌 Vocabulario Japonés',
                 'subtitle': 'Aprende vocabulario japonés con tarjetas interactivas',
                 'click-to-flip': 'Haz clic para voltear',
-                'previous': '← Anterior',
-                'flip-card': 'Voltear Tarjeta',
-                'show-front': 'Mostrar Frente',
+                'previous': '← Previo',
+                'flip-card': 'Voltear',
+                'show-front': 'Frente',
                 'next': 'Siguiente →',
-                'skip': 'Saltar →',
+                'skip': 'Omitir →',
                 'shuffle': '🔀 Mezclar',
                 'card': 'Tarjeta',
                 'of': 'de',
@@ -107,7 +118,18 @@ class VocabularyCards {
                 'total': 'Total',
                 'answered': 'Respondidas',
                 'remaining': 'Restantes',
-                'skipped': 'Omitidas'
+                'skipped': 'Omitidas',
+                'progress': 'Progreso',
+                // Status markers
+                'to-guess': 'Por Adivinar',
+                'status-correct': 'Correcto',
+                'status-incorrect': 'Incorrecto',
+                'status-skipped': 'Omitido',
+                // Button translations
+                'download-stats': '📥 Descargar Estadísticas',
+                'downloaded': '✓ ¡Descargado!',
+                'reset': '🔄 Reiniciar',
+                'reset-done': '✓ ¡Reiniciado!'
             }
         };
         
@@ -283,7 +305,7 @@ class VocabularyCards {
         if (!this.cardStatusMarker) return;
         
         if (this.filteredVocabulary.length === 0) {
-            this.cardStatusMarker.textContent = 'LOADING';
+            this.cardStatusMarker.textContent = this.t('loading').toUpperCase();
             this.cardStatusMarker.className = 'card-status-marker to-guess';
             return;
         }
@@ -296,20 +318,20 @@ class VocabularyCards {
         
         if (!wordStat) {
             // New card, not processed yet
-            this.cardStatusMarker.textContent = 'TO GUESS';
+            this.cardStatusMarker.textContent = this.t('to-guess').toUpperCase();
             this.cardStatusMarker.classList.add('to-guess');
         } else if (wordStat.correct === true) {
-            this.cardStatusMarker.textContent = 'CORRECT';
+            this.cardStatusMarker.textContent = this.t('status-correct').toUpperCase();
             this.cardStatusMarker.classList.add('correct');
         } else if (wordStat.correct === false) {
-            this.cardStatusMarker.textContent = 'INCORRECT';
+            this.cardStatusMarker.textContent = this.t('status-incorrect').toUpperCase();
             this.cardStatusMarker.classList.add('incorrect');
         } else if (wordStat.skipped) {
-            this.cardStatusMarker.textContent = 'SKIPPED';
+            this.cardStatusMarker.textContent = this.t('status-skipped').toUpperCase();
             this.cardStatusMarker.classList.add('skipped');
         } else {
             // Default state
-            this.cardStatusMarker.textContent = 'TO GUESS';
+            this.cardStatusMarker.textContent = this.t('to-guess').toUpperCase();
             this.cardStatusMarker.classList.add('to-guess');
         }
         
@@ -498,41 +520,28 @@ class VocabularyCards {
         // Update language toggle button - show the CURRENT language
         this.languageToggle.textContent = this.currentLanguage === 'en' ? '🇺🇸 EN' : '🇪🇸 ES';
         
-        // Update all elements with data-i18n attributes
-        const elements = document.querySelectorAll('[data-i18n]');
-        elements.forEach(element => {
-            const key = element.getAttribute('data-i18n');
-            const translation = this.t(key);
-            
-            // Don't update the card content elements when they have actual vocabulary data
-            if ((element.id === 'romaji' || element.id === 'english') && 
-                this.vocabulary.length > 0 && 
-                !element.textContent.includes('Loading') && 
-                !element.textContent.includes('Cargando')) {
-                return;
-            }
-            
-            element.textContent = translation;
+        // Update all translatable elements
+        this.updateTranslatableElements();
+    }
+
+    updateTranslatableElements() {
+        // Update all elements with data-translate attribute
+        const translatableElements = document.querySelectorAll('[data-translate]');
+        translatableElements.forEach(element => {
+            const translationKey = element.getAttribute('data-translate');
+            element.textContent = this.t(translationKey);
         });
         
-        // Update flip button text based on current state
-        if (this.isFlipped) {
-            this.flipBtn.textContent = this.t('show-front');
-        } else {
-            this.flipBtn.textContent = this.t('flip-card');
-        }
+        // Update status marker
+        this.updateCardStatus();
+        
+        // Update stats
+        this.updateStats();
         
         // Update category UI
         this.updateCategoryUI();
-        
-        // Update navigation buttons
-        this.updateNavigationButtons();
-        
-        // Update stats UI
-        this.setupStatsUI();
-        this.updateStats();
     }
-    
+
     setupCategoryUI() {
         const categoryList = document.getElementById('categoryList');
         const categoryHeader = document.querySelector('.category-header');
@@ -845,7 +854,7 @@ class VocabularyCards {
                 <th>✗</th>
                 <th>⏭</th>
                 <th>${this.t('remaining')}</th>
-                <th>Progress</th>
+                <th>${this.t('progress')}</th>
             `;
             thead.appendChild(headerRow);
             table.appendChild(thead);
@@ -975,7 +984,7 @@ class VocabularyCards {
         // Optional: Show a brief visual feedback
         if (this.resetBtn) {
             const originalText = this.resetBtn.textContent;
-            this.resetBtn.textContent = '✓ Reset!';
+            this.resetBtn.textContent = this.t('reset-done');
             this.resetBtn.style.backgroundColor = '#27ae60';
             setTimeout(() => {
                 this.resetBtn.textContent = originalText;
@@ -1082,7 +1091,7 @@ class VocabularyCards {
             const downloadBtn = document.getElementById('downloadStatsBtn');
             if (downloadBtn) {
                 const originalText = downloadBtn.textContent;
-                downloadBtn.textContent = '✓ Downloaded!';
+                downloadBtn.textContent = this.t('downloaded');
                 downloadBtn.style.backgroundColor = 'rgba(39, 174, 96, 0.2)';
                 setTimeout(() => {
                     downloadBtn.textContent = originalText;
