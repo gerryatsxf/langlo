@@ -71,7 +71,17 @@ class VocabularyCards {
                 'download-stats': '📥 Download Statistics',
                 'downloaded': '✓ Downloaded!',
                 'reset': '🔄 Reset',
-                'reset-done': '✓ Reset!'
+                'reset-done': '✓ Reset!',
+                // Words modal
+                'show-all-words': '📖 Show All Words',
+                'all-words-title': 'All Vocabulary Words',
+                'romaji-header': 'Romaji',
+                'japanese-header': 'Japanese',
+                'english-header': 'English',
+                'spanish-header': 'Spanish',
+                'category-header': 'Category',
+                'download-words': '📥 Download Vocabulary',
+                'words-downloaded': '✓ Downloaded!'
             },
             es: {
                 'title': '🎌 Vocabulario Japonés',
@@ -129,7 +139,17 @@ class VocabularyCards {
                 'download-stats': '📥 Descargar Estadísticas',
                 'downloaded': '✓ ¡Descargado!',
                 'reset': '🔄 Reiniciar',
-                'reset-done': '✓ ¡Reiniciado!'
+                'reset-done': '✓ ¡Reiniciado!',
+                // Words modal
+                'show-all-words': '📖 Ver Todas las Palabras',
+                'all-words-title': 'Todas las Palabras del Vocabulario',
+                'romaji-header': 'Romaji',
+                'japanese-header': 'Japonés',
+                'english-header': 'Inglés',
+                'spanish-header': 'Español',
+                'category-header': 'Categoría',
+                'download-words': '📥 Descargar Vocabulario',
+                'words-downloaded': '✓ ¡Descargado!'
             }
         };
         
@@ -223,8 +243,50 @@ class VocabularyCards {
             downloadStatsBtn.addEventListener('click', () => this.downloadStatsCSV());
         }
         
+        // Show words modal button
+        const showWordsBtn = document.getElementById('showWordsBtn');
+        if (showWordsBtn) {
+            showWordsBtn.addEventListener('click', () => this.showWordsModal());
+        }
+        
+        // Download words button
+        const downloadWordsBtn = document.getElementById('downloadWordsBtn');
+        if (downloadWordsBtn) {
+            downloadWordsBtn.addEventListener('click', () => this.downloadWordsCSV());
+        }
+        
+        // Close modal button
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener('click', () => this.closeWordsModal());
+        }
+        
+        // Close modal when clicking outside
+        const wordsModal = document.getElementById('wordsModal');
+        if (wordsModal) {
+            wordsModal.addEventListener('click', (e) => {
+                if (e.target === wordsModal) {
+                    this.closeWordsModal();
+                }
+            });
+        }
+        
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
+            // Check if modal is open
+            const modal = document.getElementById('wordsModal');
+            const isModalOpen = modal && modal.classList.contains('active');
+            
+            if (isModalOpen) {
+                // Modal-specific keyboard shortcuts
+                if (e.key === 'Escape') {
+                    e.preventDefault();
+                    this.closeWordsModal();
+                }
+                return; // Don't process other shortcuts when modal is open
+            }
+            
+            // Regular navigation shortcuts (only when modal is closed)
             switch(e.key) {
                 case 'ArrowLeft':
                     e.preventDefault();
@@ -540,6 +602,12 @@ class VocabularyCards {
         
         // Update category UI
         this.updateCategoryUI();
+        
+        // Update modal table if it's open
+        const modal = document.getElementById('wordsModal');
+        if (modal && modal.classList.contains('active')) {
+            this.populateWordsTable();
+        }
     }
 
     setupCategoryUI() {
@@ -1093,6 +1161,138 @@ class VocabularyCards {
                 const originalText = downloadBtn.textContent;
                 downloadBtn.textContent = this.t('downloaded');
                 downloadBtn.style.backgroundColor = 'rgba(39, 174, 96, 0.2)';
+                setTimeout(() => {
+                    downloadBtn.textContent = originalText;
+                    downloadBtn.style.backgroundColor = '';
+                }, 2000);
+            }
+        }
+    }
+
+    showWordsModal() {
+        const modal = document.getElementById('wordsModal');
+        if (modal) {
+            this.populateWordsTable();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+    }
+
+    closeWordsModal() {
+        const modal = document.getElementById('wordsModal');
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    }
+
+    populateWordsTable() {
+        const tableBody = document.getElementById('wordsTableBody');
+        if (!tableBody || !this.vocabulary) return;
+
+        // Clear existing content
+        tableBody.innerHTML = '';
+
+        // Sort vocabulary by category and then by romaji
+        const sortedVocabulary = [...this.vocabulary].sort((a, b) => {
+            if (a.category !== b.category) {
+                return a.category.localeCompare(b.category);
+            }
+            return a.romaji.localeCompare(b.romaji);
+        });
+
+        // Populate table with all words
+        sortedVocabulary.forEach(word => {
+            const row = document.createElement('tr');
+            
+            // Romaji column
+            const romajiCell = document.createElement('td');
+            romajiCell.textContent = word.romaji;
+            romajiCell.className = 'romaji-col';
+            row.appendChild(romajiCell);
+            
+            // Hiragana column
+            const hiraganaCell = document.createElement('td');
+            hiraganaCell.textContent = word.hiragana;
+            hiraganaCell.className = 'japanese-col';
+            row.appendChild(hiraganaCell);
+            
+            // English column
+            const englishCell = document.createElement('td');
+            englishCell.textContent = word.english;
+            englishCell.className = 'english-col';
+            row.appendChild(englishCell);
+            
+            // Spanish column
+            const spanishCell = document.createElement('td');
+            spanishCell.textContent = word.spanish;
+            spanishCell.className = 'spanish-col';
+            row.appendChild(spanishCell);
+            
+            // Category column
+            const categoryCell = document.createElement('td');
+            categoryCell.textContent = this.t(word.category) || word.category;
+            categoryCell.className = 'category-col';
+            row.appendChild(categoryCell);
+            
+            tableBody.appendChild(row);
+        });
+    }
+
+    downloadWordsCSV() {
+        if (!this.vocabulary || this.vocabulary.length === 0) {
+            console.log('No vocabulary data available');
+            return;
+        }
+
+        // Create CSV header
+        let csvContent = 'Romaji,Japanese,English,Spanish,Category\n';
+        
+        // Sort vocabulary by category and then by romaji (same as in the table)
+        const sortedVocabulary = [...this.vocabulary].sort((a, b) => {
+            if (a.category !== b.category) {
+                return a.category.localeCompare(b.category);
+            }
+            return a.romaji.localeCompare(b.romaji);
+        });
+
+        // Add each word to CSV
+        sortedVocabulary.forEach(word => {
+            // Escape any commas or quotes in the data
+            const romaji = `"${word.romaji.replace(/"/g, '""')}"`;
+            const hiragana = `"${word.hiragana.replace(/"/g, '""')}"`;
+            const english = `"${word.english.replace(/"/g, '""')}"`;
+            const spanish = `"${word.spanish.replace(/"/g, '""')}"`;
+            const category = `"${(this.t(word.category) || word.category).replace(/"/g, '""')}"`;
+            
+            csvContent += `${romaji},${hiragana},${english},${spanish},${category}\n`;
+        });
+
+        // Create and download the file
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const link = document.createElement('a');
+        
+        if (link.download !== undefined) {
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            
+            // Generate filename with current date
+            const now = new Date();
+            const dateStr = now.toISOString().split('T')[0]; // YYYY-MM-DD format
+            const timeStr = now.toTimeString().split(' ')[0].replace(/:/g, '-'); // HH-MM-SS format
+            link.setAttribute('download', `japanese-vocabulary-words-${dateStr}-${timeStr}.csv`);
+            
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Show feedback
+            const downloadBtn = document.getElementById('downloadWordsBtn');
+            if (downloadBtn) {
+                const originalText = downloadBtn.textContent;
+                downloadBtn.textContent = this.t('words-downloaded');
+                downloadBtn.style.backgroundColor = 'rgba(39, 174, 96, 0.3)';
                 setTimeout(() => {
                     downloadBtn.textContent = originalText;
                     downloadBtn.style.backgroundColor = '';
