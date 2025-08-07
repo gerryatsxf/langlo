@@ -1,0 +1,754 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.app-layout {
+    display: flex;
+    gap: 30px;
+    max-width: 1400px;
+    width: 100%;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.category-sidebar {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 300px;
+    height: 679px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.stats-sidebar {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 400px;
+    height: 679px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.stats-header {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.stats-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.stats-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.stats-list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.stats-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.stats-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.stats-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 8px 10px;
+    color: white;
+    margin-bottom: 6px;
+}
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    font-size: 0.75rem;
+}
+
+.stats-table th {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px 4px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 0.7rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stats-table td {
+    padding: 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    vertical-align: middle;
+}
+
+.stats-table tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.category-name {
+    font-weight: bold;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.stat-number {
+    text-align: center;
+    width: 25px;
+    font-weight: bold;
+}
+
+.stat-number.correct {
+    color: #27ae60;
+}
+
+.stat-number.incorrect {
+    color: #e74c3c;
+}
+
+.stat-number.skipped {
+    color: #f39c12;
+}
+
+.stat-number.remaining {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.table-progress-bar {
+    position: relative;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    width: 80px;
+    display: flex;
+}
+
+.stats-category {
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+.stats-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    margin-bottom: 2px;
+    line-height: 1.2;
+}
+
+.stats-progress {
+    display: flex;
+    gap: 1px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.progress-correct {
+    background: #27ae60;
+}
+
+.progress-incorrect {
+    background: #e74c3c;
+}
+
+.progress-skipped {
+    background: #f39c12;
+}
+
+.progress-unanswered {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.category-header {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.category-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-category {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-all {
+    background: #27ae60;
+    color: white;
+}
+
+.btn-all:hover {
+    background: #229954;
+    transform: translateY(-1px);
+}
+
+.btn-none {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-none:hover {
+    background: #c0392b;
+    transform: translateY(-1px);
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.category-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.category-list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.category-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.category-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.category-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.category-item label {
+    cursor: pointer;
+    user-select: none;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.language-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    text-align: right;
+}
+
+.header {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.btn-language {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: 2px solid rgba(255,255,255,0.3);
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    min-width: 60px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-language:hover {
+    background: rgba(255,255,255,0.3);
+    border-color: rgba(255,255,255,0.5);
+    transform: translateY(-1px);
+}
+
+.btn-reset {
+    background: rgba(255, 165, 0, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 165, 0, 0.4);
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    min-width: 80px;
+    margin-left: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-reset:hover {
+    background: rgba(255, 165, 0, 0.3);
+    border-color: rgba(255, 165, 0, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Top-right button group - all using same base styling */
+.language-button {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    min-width: 60px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.language-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.reset-button {
+    background: rgba(255, 165, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 165, 0, 0.2);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    min-width: 80px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.reset-button:hover {
+    background: rgba(255, 165, 0, 0.2);
+    border-color: rgba(255, 165, 0, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.flip-direction-button {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 8px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    min-width: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.flip-direction-button:hover {
+    background: rgba(102, 126, 234, 0.2);
+    border-color: rgba(102, 126, 234, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.card-container {
+    perspective: 1000px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.card-status-marker {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 4px 12px;
+    background: #9b59b6;
+    color: white;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.card-status-marker.to-guess {
+    background: #9b59b6;
+    color: white;
+}
+
+.card-status-marker.correct {
+    background: #27ae60;
+    color: white;
+}
+
+.card-status-marker.incorrect {
+    background: #e74c3c;
+    color: white;
+}
+
+.card-status-marker.skipped {
+    background: #f39c12;
+    color: white;
+}
+
+.card {
+    background: transparent;
+    border-radius: 20px;
+    min-height: 300px;
+    cursor: pointer;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    background: white;
+    min-height: 300px;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background: #f8f9fa;
+}
+
+.romaji {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hiragana {
+    font-size: 3rem;
+    color: #e74c3c;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.english {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.category {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #3498db;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+}
+
+.controls {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 12px 40px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    background: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: #95a5a6;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #7f8c8d;
+    transform: translateY(-2px);
+}
+
+.btn-skip {
+    background: #f39c12;
+    color: white;
+}
+
+.btn-skip:hover {
+    background: #e67e22;
+    transform: translateY(-2px);
+}
+
+/* Navigation buttons with fixed widths - only apply to main control buttons */
+.controls .btn-secondary, 
+.controls .btn-skip {
+    width: 140px;
+    min-width: 140px;
+    max-width: 140px;
+}
+
+.controls .btn-primary {
+    width: 160px;
+    min-width: 160px;
+    max-width: 160px;
+}
+
+/* Flip direction button specific styling */
+#flipDirectionBtn {
+    width: 110px;
+    min-width: 110px;
+    max-width: 160px;
+}
+
+.btn-success {
+    background: #27ae60;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #229954;
+    transform: translateY(-2px);
+}
+
+.btn-correct {
+    background: #27ae60;
+    color: white;
+}
+
+.btn-correct:hover {
+    background: #229954;
+    transform: translateY(-2px);
+}
+
+.btn-incorrect {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-incorrect:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+.progress {
+    margin-top: 20px;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.progress-bar {
+    background: rgba(255,255,255,0.2);
+    height: 8px;
+    border-radius: 4px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background: #27ae60;
+    height: 100%;
+    transition: width 0.3s ease;
+    border-radius: 4px;
+}
+
+.card-hint {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.1);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #666;
+    z-index: 10;
+    pointer-events: none;
+}
+
+@media (max-width: 480px) {
+    .app-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .category-sidebar {
+        width: 100%;
+        order: 2;
+        margin-top: 0;
+        height: auto;
+        align-self: auto;
+    }
+    
+    .container {
+        order: 1;
+    }
+    
+    .language-toggle {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .btn-language {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        min-width: 50px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .card-front, .card-back {
+        padding: 30px 20px;
+        min-height: 250px;
+    }
+    
+    .romaji {
+        font-size: 1.5rem;
+    }
+    
+    .hiragana {
+        font-size: 2.5rem;
+    }
+    
+    .english {
+        font-size: 1.4rem;
+    }
+}

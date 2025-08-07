@@ -1,0 +1,1562 @@
+[
+  {
+    "id": 1,
+    "romaji": "Amerika",
+    "hiragana": "アメリカ",
+    "english": "United States",
+    "spanish": "Estados Unidos",
+    "category": "countries"
+  },
+  {
+    "id": 2,
+    "romaji": "Igirisu",
+    "hiragana": "イギリス",
+    "english": "United Kingdom",
+    "spanish": "Reino Unido",
+    "category": "countries"
+  },
+  {
+    "id": 3,
+    "romaji": "Itaria",
+    "hiragana": "イタリア",
+    "english": "Italy",
+    "spanish": "Italia",
+    "category": "countries"
+  },
+  {
+    "id": 4,
+    "romaji": "tabemono",
+    "hiragana": "たべもの",
+    "english": "food",
+    "spanish": "comida",
+    "category": "general"
+  },
+  {
+    "id": 5,
+    "romaji": "mizu",
+    "hiragana": "みず",
+    "english": "water",
+    "spanish": "agua",
+    "category": "general"
+  },
+  {
+    "id": 6,
+    "romaji": "hon",
+    "hiragana": "ほん",
+    "english": "book",
+    "spanish": "libro",
+    "category": "objects"
+  },
+  {
+    "id": 7,
+    "romaji": "kuruma",
+    "hiragana": "くるま",
+    "english": "car",
+    "spanish": "coche",
+    "category": "objects"
+  },
+  {
+    "id": 8,
+    "romaji": "gakkou",
+    "hiragana": "がっこう",
+    "english": "school",
+    "spanish": "escuela",
+    "category": "places"
+  },
+  {
+    "id": 9,
+    "romaji": "sensei",
+    "hiragana": "せんせい",
+    "english": "teacher",
+    "spanish": "profesor/a",
+    "category": "people"
+  },
+  {
+    "id": 10,
+    "romaji": "tomodachi",
+    "hiragana": "ともだち",
+    "english": "friend",
+    "spanish": "amigo/a",
+    "category": "people"
+  },
+  {
+    "id": 11,
+    "romaji": "akai",
+    "hiragana": "あかい",
+    "english": "red",
+    "spanish": "rojo",
+    "category": "colors"
+  },
+  {
+    "id": 12,
+    "romaji": "aoi",
+    "hiragana": "あおい",
+    "english": "blue",
+    "spanish": "azul",
+    "category": "colors"
+  },
+  {
+    "id": 13,
+    "romaji": "kiiroi",
+    "hiragana": "きいろい",
+    "english": "yellow",
+    "spanish": "amarillo",
+    "category": "colors"
+  },
+  {
+    "id": 14,
+    "romaji": "midori",
+    "hiragana": "みどり",
+    "english": "green",
+    "spanish": "verde",
+    "category": "colors"
+  },
+  {
+    "id": 15,
+    "romaji": "inu",
+    "hiragana": "いぬ",
+    "english": "dog",
+    "spanish": "perro",
+    "category": "animals"
+  },
+  {
+    "id": 16,
+    "romaji": "neko",
+    "hiragana": "ねこ",
+    "english": "cat",
+    "spanish": "gato",
+    "category": "animals"
+  },
+  {
+    "id": 17,
+    "romaji": "tori",
+    "hiragana": "とり",
+    "english": "bird",
+    "spanish": "pájaro",
+    "category": "animals"
+  },
+  {
+    "id": 18,
+    "romaji": "sakana",
+    "hiragana": "さかな",
+    "english": "fish",
+    "spanish": "pez",
+    "category": "animals"
+  },
+  {
+    "id": 19,
+    "romaji": "uma",
+    "hiragana": "うま",
+    "english": "horse",
+    "spanish": "caballo",
+    "category": "animals"
+  },
+  {
+    "id": 20,
+    "romaji": "gohan",
+    "hiragana": "ごはん",
+    "english": "rice/meal",
+    "spanish": "arroz/comida",
+    "category": "food"
+  },
+  {
+    "id": 21,
+    "romaji": "pan",
+    "hiragana": "パン",
+    "english": "bread",
+    "spanish": "pan",
+    "category": "food"
+  },
+  {
+    "id": 22,
+    "romaji": "niku",
+    "hiragana": "にく",
+    "english": "meat",
+    "spanish": "carne",
+    "category": "food"
+  },
+  {
+    "id": 23,
+    "romaji": "yasai",
+    "hiragana": "やさい",
+    "english": "vegetables",
+    "spanish": "verduras",
+    "category": "food"
+  },
+  {
+    "id": 24,
+    "romaji": "kudamono",
+    "hiragana": "くだもの",
+    "english": "fruit",
+    "spanish": "fruta",
+    "category": "food"
+  },
+  {
+    "id": 25,
+    "romaji": "ocha",
+    "hiragana": "おちゃ",
+    "english": "tea",
+    "spanish": "té",
+    "category": "drinks"
+  },
+  {
+    "id": 26,
+    "romaji": "koohii",
+    "hiragana": "コーヒー",
+    "english": "coffee",
+    "spanish": "café",
+    "category": "drinks"
+  },
+  {
+    "id": 27,
+    "romaji": "biiru",
+    "hiragana": "ビール",
+    "english": "beer",
+    "spanish": "cerveza",
+    "category": "drinks"
+  },
+  {
+    "id": 28,
+    "romaji": "juusu",
+    "hiragana": "ジュース",
+    "english": "juice",
+    "spanish": "jugo",
+    "category": "drinks"
+  },
+  {
+    "id": 29,
+    "romaji": "ie",
+    "hiragana": "いえ",
+    "english": "house",
+    "spanish": "casa",
+    "category": "places"
+  },
+  {
+    "id": 30,
+    "romaji": "kissaten",
+    "hiragana": "きっさてん",
+    "english": "cafe",
+    "spanish": "cafetería",
+    "category": "places"
+  },
+  {
+    "id": 31,
+    "romaji": "resutoran",
+    "hiragana": "レストラン",
+    "english": "restaurant",
+    "spanish": "restaurante",
+    "category": "places"
+  },
+  {
+    "id": 32,
+    "romaji": "ginkou",
+    "hiragana": "ぎんこう",
+    "english": "bank",
+    "spanish": "banco",
+    "category": "places"
+  },
+  {
+    "id": 33,
+    "romaji": "byouin",
+    "hiragana": "びょういん",
+    "english": "hospital",
+    "spanish": "hospital",
+    "category": "places"
+  },
+  {
+    "id": 34,
+    "romaji": "isha",
+    "hiragana": "いしゃ",
+    "english": "doctor",
+    "spanish": "doctor/a",
+    "category": "people"
+  },
+  {
+    "id": 35,
+    "romaji": "gakusei",
+    "hiragana": "がくせい",
+    "english": "student",
+    "spanish": "estudiante",
+    "category": "people"
+  },
+  {
+    "id": 36,
+    "romaji": "keisatsukan",
+    "hiragana": "けいさつかん",
+    "english": "police officer",
+    "spanish": "policía",
+    "category": "people"
+  },
+  {
+    "id": 37,
+    "romaji": "haisha",
+    "hiragana": "はいしゃ",
+    "english": "dentist",
+    "spanish": "dentista",
+    "category": "people"
+  },
+  {
+    "id": 38,
+    "romaji": "tsukue",
+    "hiragana": "つくえ",
+    "english": "desk",
+    "spanish": "escritorio",
+    "category": "furniture"
+  },
+  {
+    "id": 39,
+    "romaji": "isu",
+    "hiragana": "いす",
+    "english": "chair",
+    "spanish": "silla",
+    "category": "furniture"
+  },
+  {
+    "id": 40,
+    "romaji": "beddo",
+    "hiragana": "ベッド",
+    "english": "bed",
+    "spanish": "cama",
+    "category": "furniture"
+  },
+  {
+    "id": 41,
+    "romaji": "teeburu",
+    "hiragana": "テーブル",
+    "english": "table",
+    "spanish": "mesa",
+    "category": "furniture"
+  },
+  {
+    "id": 42,
+    "romaji": "konpyuutaa",
+    "hiragana": "コンピューター",
+    "english": "computer",
+    "spanish": "computadora",
+    "category": "technology"
+  },
+  {
+    "id": 43,
+    "romaji": "keitai",
+    "hiragana": "けいたい",
+    "english": "mobile phone",
+    "spanish": "teléfono móvil",
+    "category": "technology"
+  },
+  {
+    "id": 44,
+    "romaji": "terebi",
+    "hiragana": "テレビ",
+    "english": "television",
+    "spanish": "televisión",
+    "category": "technology"
+  },
+  {
+    "id": 45,
+    "romaji": "rajio",
+    "hiragana": "ラジオ",
+    "english": "radio",
+    "spanish": "radio",
+    "category": "technology"
+  },
+  {
+    "id": 46,
+    "romaji": "tenki",
+    "hiragana": "てんき",
+    "english": "weather",
+    "spanish": "clima",
+    "category": "weather"
+  },
+  {
+    "id": 47,
+    "romaji": "ame",
+    "hiragana": "あめ",
+    "english": "rain",
+    "spanish": "lluvia",
+    "category": "weather"
+  },
+  {
+    "id": 48,
+    "romaji": "yuki",
+    "hiragana": "ゆき",
+    "english": "snow",
+    "spanish": "nieve",
+    "category": "weather"
+  },
+  {
+    "id": 49,
+    "romaji": "taiyou",
+    "hiragana": "たいよう",
+    "english": "sun",
+    "spanish": "sol",
+    "category": "weather"
+  },
+  {
+    "id": 50,
+    "romaji": "kaze",
+    "hiragana": "かぜ",
+    "english": "wind",
+    "spanish": "viento",
+    "category": "weather"
+  },
+  {
+    "id": 51,
+    "romaji": "kumo",
+    "hiragana": "くも",
+    "english": "cloud",
+    "spanish": "nube",
+    "category": "weather"
+  },
+  {
+    "id": 52,
+    "romaji": "kaminari",
+    "hiragana": "かみなり",
+    "english": "thunder",
+    "spanish": "trueno",
+    "category": "weather"
+  },
+  {
+    "id": 53,
+    "romaji": "buta",
+    "hiragana": "ぶた",
+    "english": "pig",
+    "spanish": "cerdo",
+    "category": "animals"
+  },
+  {
+    "id": 54,
+    "romaji": "ushi",
+    "hiragana": "うし",
+    "english": "cow",
+    "spanish": "vaca",
+    "category": "animals"
+  },
+  {
+    "id": 55,
+    "romaji": "hitsuji",
+    "hiragana": "ひつじ",
+    "english": "sheep",
+    "spanish": "oveja",
+    "category": "animals"
+  },
+  {
+    "id": 56,
+    "romaji": "usagi",
+    "hiragana": "うさぎ",
+    "english": "rabbit",
+    "spanish": "conejo",
+    "category": "animals"
+  },
+  {
+    "id": 57,
+    "romaji": "nezumi",
+    "hiragana": "ねずみ",
+    "english": "mouse",
+    "spanish": "ratón",
+    "category": "animals"
+  },
+  {
+    "id": 58,
+    "romaji": "kuma",
+    "hiragana": "くま",
+    "english": "bear",
+    "spanish": "oso",
+    "category": "animals"
+  },
+  {
+    "id": 59,
+    "romaji": "saru",
+    "hiragana": "さる",
+    "english": "monkey",
+    "spanish": "mono",
+    "category": "animals"
+  },
+  {
+    "id": 60,
+    "romaji": "zou",
+    "hiragana": "ぞう",
+    "english": "elephant",
+    "spanish": "elefante",
+    "category": "animals"
+  },
+  {
+    "id": 61,
+    "romaji": "kirin",
+    "hiragana": "きりん",
+    "english": "giraffe",
+    "spanish": "jirafa",
+    "category": "animals"
+  },
+  {
+    "id": 62,
+    "romaji": "raion",
+    "hiragana": "ライオン",
+    "english": "lion",
+    "spanish": "león",
+    "category": "animals"
+  },
+  {
+    "id": 63,
+    "romaji": "tora",
+    "hiragana": "とら",
+    "english": "tiger",
+    "spanish": "tigre",
+    "category": "animals"
+  },
+  {
+    "id": 64,
+    "romaji": "ringo",
+    "hiragana": "りんご",
+    "english": "apple",
+    "spanish": "manzana",
+    "category": "food"
+  },
+  {
+    "id": 65,
+    "romaji": "banana",
+    "hiragana": "バナナ",
+    "english": "banana",
+    "spanish": "plátano",
+    "category": "food"
+  },
+  {
+    "id": 66,
+    "romaji": "mikan",
+    "hiragana": "みかん",
+    "english": "orange",
+    "spanish": "naranja",
+    "category": "food"
+  },
+  {
+    "id": 67,
+    "romaji": "ichigo",
+    "hiragana": "いちご",
+    "english": "strawberry",
+    "spanish": "fresa",
+    "category": "food"
+  },
+  {
+    "id": 68,
+    "romaji": "budou",
+    "hiragana": "ぶどう",
+    "english": "grapes",
+    "spanish": "uvas",
+    "category": "food"
+  },
+  {
+    "id": 69,
+    "romaji": "nashi",
+    "hiragana": "なし",
+    "english": "pear",
+    "spanish": "pera",
+    "category": "food"
+  },
+  {
+    "id": 70,
+    "romaji": "momo",
+    "hiragana": "もも",
+    "english": "peach",
+    "spanish": "durazno",
+    "category": "food"
+  },
+  {
+    "id": 71,
+    "romaji": "suika",
+    "hiragana": "すいか",
+    "english": "watermelon",
+    "spanish": "sandía",
+    "category": "food"
+  },
+  {
+    "id": 72,
+    "romaji": "melon",
+    "hiragana": "メロン",
+    "english": "melon",
+    "spanish": "melón",
+    "category": "food"
+  },
+  {
+    "id": 73,
+    "romaji": "tamago",
+    "hiragana": "たまご",
+    "english": "egg",
+    "spanish": "huevo",
+    "category": "food"
+  },
+  {
+    "id": 74,
+    "romaji": "gyuunyuu",
+    "hiragana": "ぎゅうにゅう",
+    "english": "milk",
+    "spanish": "leche",
+    "category": "drinks"
+  },
+  {
+    "id": 75,
+    "romaji": "sake",
+    "hiragana": "さけ",
+    "english": "alcohol/sake",
+    "spanish": "alcohol/sake",
+    "category": "drinks"
+  },
+  {
+    "id": 76,
+    "romaji": "wain",
+    "hiragana": "ワイン",
+    "english": "wine",
+    "spanish": "vino",
+    "category": "drinks"
+  },
+  {
+    "id": 77,
+    "romaji": "coca cola",
+    "hiragana": "コカコーラ",
+    "english": "coca cola",
+    "spanish": "coca cola",
+    "category": "drinks"
+  },
+  {
+    "id": 78,
+    "romaji": "soda",
+    "hiragana": "ソーダ",
+    "english": "soda",
+    "spanish": "soda",
+    "category": "drinks"
+  },
+  {
+    "id": 79,
+    "romaji": "murasaki",
+    "hiragana": "むらさき",
+    "english": "purple",
+    "spanish": "morado",
+    "category": "colors"
+  },
+  {
+    "id": 80,
+    "romaji": "pinku",
+    "hiragana": "ピンク",
+    "english": "pink",
+    "spanish": "rosa",
+    "category": "colors"
+  },
+  {
+    "id": 81,
+    "romaji": "chairo",
+    "hiragana": "ちゃいろ",
+    "english": "brown",
+    "spanish": "marrón",
+    "category": "colors"
+  },
+  {
+    "id": 82,
+    "romaji": "kuro",
+    "hiragana": "くろ",
+    "english": "black",
+    "spanish": "negro",
+    "category": "colors"
+  },
+  {
+    "id": 83,
+    "romaji": "shiro",
+    "hiragana": "しろ",
+    "english": "white",
+    "spanish": "blanco",
+    "category": "colors"
+  },
+  {
+    "id": 84,
+    "romaji": "hai-iro",
+    "hiragana": "はいいろ",
+    "english": "gray",
+    "spanish": "gris",
+    "category": "colors"
+  },
+  {
+    "id": 85,
+    "romaji": "orenji",
+    "hiragana": "オレンジ",
+    "english": "orange",
+    "spanish": "naranja",
+    "category": "colors"
+  },
+  {
+    "id": 86,
+    "romaji": "kokuban",
+    "hiragana": "こくばん",
+    "english": "blackboard",
+    "spanish": "pizarra",
+    "category": "objects"
+  },
+  {
+    "id": 87,
+    "romaji": "enpitsu",
+    "hiragana": "えんぴつ",
+    "english": "pencil",
+    "spanish": "lápiz",
+    "category": "objects"
+  },
+  {
+    "id": 88,
+    "romaji": "pen",
+    "hiragana": "ペン",
+    "english": "pen",
+    "spanish": "bolígrafo",
+    "category": "objects"
+  },
+  {
+    "id": 89,
+    "romaji": "kaban",
+    "hiragana": "かばん",
+    "english": "bag",
+    "spanish": "bolsa",
+    "category": "objects"
+  },
+  {
+    "id": 90,
+    "romaji": "tokei",
+    "hiragana": "とけい",
+    "english": "clock/watch",
+    "spanish": "reloj",
+    "category": "objects"
+  },
+  {
+    "id": 91,
+    "romaji": "megane",
+    "hiragana": "めがね",
+    "english": "glasses",
+    "spanish": "gafas",
+    "category": "objects"
+  },
+  {
+    "id": 92,
+    "romaji": "kagi",
+    "hiragana": "かぎ",
+    "english": "key",
+    "spanish": "llave",
+    "category": "objects"
+  },
+  {
+    "id": 93,
+    "romaji": "kamera",
+    "hiragana": "カメラ",
+    "english": "camera",
+    "spanish": "cámara",
+    "category": "technology"
+  },
+  {
+    "id": 94,
+    "romaji": "denwa",
+    "hiragana": "でんわ",
+    "english": "telephone",
+    "spanish": "teléfono",
+    "category": "technology"
+  },
+  {
+    "id": 95,
+    "romaji": "intaanetto",
+    "hiragana": "インターネット",
+    "english": "internet",
+    "spanish": "internet",
+    "category": "technology"
+  },
+  {
+    "id": 96,
+    "romaji": "geemu",
+    "hiragana": "ゲーム",
+    "english": "game",
+    "spanish": "juego",
+    "category": "technology"
+  },
+  {
+    "id": 97,
+    "romaji": "fakkusu",
+    "hiragana": "ファックス",
+    "english": "fax",
+    "spanish": "fax",
+    "category": "technology"
+  },
+  {
+    "id": 98,
+    "romaji": "sofaa",
+    "hiragana": "ソファー",
+    "english": "sofa",
+    "spanish": "sofá",
+    "category": "furniture"
+  },
+  {
+    "id": 99,
+    "romaji": "tansu",
+    "hiragana": "たんす",
+    "english": "chest of drawers",
+    "spanish": "cómoda",
+    "category": "furniture"
+  },
+  {
+    "id": 100,
+    "romaji": "hon-dana",
+    "hiragana": "ほんだな",
+    "english": "bookshelf",
+    "spanish": "estantería",
+    "category": "furniture"
+  },
+  {
+    "id": 101,
+    "romaji": "reizouko",
+    "hiragana": "れいぞうこ",
+    "english": "refrigerator",
+    "spanish": "refrigerador",
+    "category": "furniture"
+  },
+  {
+    "id": 102,
+    "romaji": "sentakuki",
+    "hiragana": "せんたくき",
+    "english": "washing machine",
+    "spanish": "lavadora",
+    "category": "furniture"
+  },
+  {
+    "id": 103,
+    "romaji": "kookaa",
+    "hiragana": "こうか",
+    "english": "singer",
+    "spanish": "cantante",
+    "category": "people"
+  },
+  {
+    "id": 104,
+    "romaji": "kenchikuka",
+    "hiragana": "けんちくか",
+    "english": "architect",
+    "spanish": "arquitecto",
+    "category": "people"
+  },
+  {
+    "id": 105,
+    "romaji": "kookku",
+    "hiragana": "コック",
+    "english": "cook",
+    "spanish": "cocinero",
+    "category": "people"
+  },
+  {
+    "id": 106,
+    "romaji": "untensha",
+    "hiragana": "うんてんしゃ",
+    "english": "driver",
+    "spanish": "conductor",
+    "category": "people"
+  },
+  {
+    "id": 107,
+    "romaji": "bengoshi",
+    "hiragana": "べんごし",
+    "english": "lawyer",
+    "spanish": "abogado",
+    "category": "people"
+  },
+  {
+    "id": 108,
+    "romaji": "kangofu",
+    "hiragana": "かんごふ",
+    "english": "nurse",
+    "spanish": "enfermero/a",
+    "category": "people"
+  },
+  {
+    "id": 109,
+    "romaji": "shimbun-kisha",
+    "hiragana": "しんぶんきしゃ",
+    "english": "journalist",
+    "spanish": "periodista",
+    "category": "people"
+  },
+  {
+    "id": 110,
+    "romaji": "supa",
+    "hiragana": "スーパー",
+    "english": "supermarket",
+    "spanish": "supermercado",
+    "category": "places"
+  },
+  {
+    "id": 111,
+    "romaji": "eki",
+    "hiragana": "えき",
+    "english": "station",
+    "spanish": "estación",
+    "category": "places"
+  },
+  {
+    "id": 112,
+    "romaji": "kuukou",
+    "hiragana": "くうこう",
+    "english": "airport",
+    "spanish": "aeropuerto",
+    "category": "places"
+  },
+  {
+    "id": 113,
+    "romaji": "minato",
+    "hiragana": "みなと",
+    "english": "harbor",
+    "spanish": "puerto",
+    "category": "places"
+  },
+  {
+    "id": 114,
+    "romaji": "kouen",
+    "hiragana": "こうえん",
+    "english": "park",
+    "spanish": "parque",
+    "category": "places"
+  },
+  {
+    "id": 115,
+    "romaji": "toshokan",
+    "hiragana": "としょかん",
+    "english": "library",
+    "spanish": "biblioteca",
+    "category": "places"
+  },
+  {
+    "id": 116,
+    "romaji": "hakubutsukan",
+    "hiragana": "はくぶつかん",
+    "english": "museum",
+    "spanish": "museo",
+    "category": "places"
+  },
+  {
+    "id": 117,
+    "romaji": "eiga-kan",
+    "hiragana": "えいがかん",
+    "english": "movie theater",
+    "spanish": "cine",
+    "category": "places"
+  },
+  {
+    "id": 118,
+    "romaji": "hoteru",
+    "hiragana": "ホテル",
+    "english": "hotel",
+    "spanish": "hotel",
+    "category": "places"
+  },
+  {
+    "id": 119,
+    "romaji": "doitsu",
+    "hiragana": "ドイツ",
+    "english": "Germany",
+    "spanish": "Alemania",
+    "category": "countries"
+  },
+  {
+    "id": 120,
+    "romaji": "furansu",
+    "hiragana": "フランス",
+    "english": "France",
+    "spanish": "Francia",
+    "category": "countries"
+  },
+  {
+    "id": 121,
+    "romaji": "supein",
+    "hiragana": "スペイン",
+    "english": "Spain",
+    "spanish": "España",
+    "category": "countries"
+  },
+  {
+    "id": 122,
+    "romaji": "kanada",
+    "hiragana": "カナダ",
+    "english": "Canada",
+    "spanish": "Canadá",
+    "category": "countries"
+  },
+  {
+    "id": 123,
+    "romaji": "burajiru",
+    "hiragana": "ブラジル",
+    "english": "Brazil",
+    "spanish": "Brasil",
+    "category": "countries"
+  },
+  {
+    "id": 124,
+    "romaji": "chuugoku",
+    "hiragana": "ちゅうごく",
+    "english": "China",
+    "spanish": "China",
+    "category": "countries"
+  },
+  {
+    "id": 125,
+    "romaji": "kankoku",
+    "hiragana": "かんこく",
+    "english": "South Korea",
+    "spanish": "Corea del Sur",
+    "category": "countries"
+  },
+  {
+    "id": 126,
+    "romaji": "tai",
+    "hiragana": "タイ",
+    "english": "Thailand",
+    "spanish": "Tailandia",
+    "category": "countries"
+  },
+  {
+    "id": 127,
+    "romaji": "infuruenza",
+    "hiragana": "インフルエンザ",
+    "english": "influenza",
+    "spanish": "gripe",
+    "category": "general"
+  },
+  {
+    "id": 128,
+    "romaji": "denki",
+    "hiragana": "でんき",
+    "english": "electricity",
+    "spanish": "electricidad",
+    "category": "general"
+  },
+  {
+    "id": 129,
+    "romaji": "gasu",
+    "hiragana": "ガス",
+    "english": "gas",
+    "spanish": "gas",
+    "category": "general"
+  },
+  {
+    "id": 130,
+    "romaji": "okane",
+    "hiragana": "おかね",
+    "english": "money",
+    "spanish": "dinero",
+    "category": "general"
+  },
+  {
+    "id": 131,
+    "romaji": "gakkou",
+    "hiragana": "がっこう",
+    "english": "school",
+    "spanish": "escuela",
+    "category": "education"
+  },
+  {
+    "id": 132,
+    "romaji": "sensei",
+    "hiragana": "せんせい",
+    "english": "teacher",
+    "spanish": "profesor",
+    "category": "education"
+  },
+  {
+    "id": 133,
+    "romaji": "gakusei",
+    "hiragana": "がくせい",
+    "english": "student",
+    "spanish": "estudiante",
+    "category": "education"
+  },
+  {
+    "id": 134,
+    "romaji": "kyoukasho",
+    "hiragana": "きょうかしょ",
+    "english": "textbook",
+    "spanish": "libro de texto",
+    "category": "education"
+  },
+  {
+    "id": 135,
+    "romaji": "shukudai",
+    "hiragana": "しゅくだい",
+    "english": "homework",
+    "spanish": "tarea",
+    "category": "education"
+  },
+  {
+    "id": 136,
+    "romaji": "shiken",
+    "hiragana": "しけん",
+    "english": "exam",
+    "spanish": "examen",
+    "category": "education"
+  },
+  {
+    "id": 137,
+    "romaji": "sukoshi",
+    "hiragana": "すこし",
+    "english": "a little",
+    "spanish": "un poco",
+    "category": "quantity"
+  },
+  {
+    "id": 138,
+    "romaji": "takusan",
+    "hiragana": "たくさん",
+    "english": "a lot",
+    "spanish": "mucho",
+    "category": "quantity"
+  },
+  {
+    "id": 139,
+    "romaji": "zenbu",
+    "hiragana": "ぜんぶ",
+    "english": "all",
+    "spanish": "todo",
+    "category": "quantity"
+  },
+  {
+    "id": 140,
+    "romaji": "nanimo",
+    "hiragana": "なにも",
+    "english": "nothing",
+    "spanish": "nada",
+    "category": "quantity"
+  },
+  {
+    "id": 141,
+    "romaji": "hanbun",
+    "hiragana": "はんぶん",
+    "english": "half",
+    "spanish": "mitad",
+    "category": "quantity"
+  },
+  {
+    "id": 142,
+    "romaji": "supootsu",
+    "hiragana": "スポーツ",
+    "english": "sports",
+    "spanish": "deportes",
+    "category": "sports"
+  },
+  {
+    "id": 143,
+    "romaji": "sakkaa",
+    "hiragana": "サッカー",
+    "english": "soccer",
+    "spanish": "fútbol",
+    "category": "sports"
+  },
+  {
+    "id": 144,
+    "romaji": "yakyuu",
+    "hiragana": "やきゅう",
+    "english": "baseball",
+    "spanish": "béisbol",
+    "category": "sports"
+  },
+  {
+    "id": 145,
+    "romaji": "tenisu",
+    "hiragana": "テニス",
+    "english": "tennis",
+    "spanish": "tenis",
+    "category": "sports"
+  },
+  {
+    "id": 146,
+    "romaji": "basuketto",
+    "hiragana": "バスケット",
+    "english": "basketball",
+    "spanish": "baloncesto",
+    "category": "sports"
+  },
+  {
+    "id": 147,
+    "romaji": "oyogi",
+    "hiragana": "およぎ",
+    "english": "swimming",
+    "spanish": "natación",
+    "category": "sports"
+  },
+  {
+    "id": 148,
+    "romaji": "ongaku",
+    "hiragana": "おんがく",
+    "english": "music",
+    "spanish": "música",
+    "category": "entertainment"
+  },
+  {
+    "id": 149,
+    "romaji": "eiga",
+    "hiragana": "えいが",
+    "english": "movie",
+    "spanish": "película",
+    "category": "entertainment"
+  },
+  {
+    "id": 150,
+    "romaji": "terebi",
+    "hiragana": "テレビ",
+    "english": "television",
+    "spanish": "televisión",
+    "category": "entertainment"
+  },
+  {
+    "id": 151,
+    "romaji": "rajio",
+    "hiragana": "ラジオ",
+    "english": "radio",
+    "spanish": "radio",
+    "category": "entertainment"
+  },
+  {
+    "id": 152,
+    "romaji": "hon",
+    "hiragana": "ほん",
+    "english": "book",
+    "spanish": "libro",
+    "category": "entertainment"
+  },
+  {
+    "id": 153,
+    "romaji": "manga",
+    "hiragana": "まんが",
+    "english": "manga",
+    "spanish": "manga",
+    "category": "entertainment"
+  },
+  {
+    "id": 154,
+    "romaji": "byouki",
+    "hiragana": "びょうき",
+    "english": "illness",
+    "spanish": "enfermedad",
+    "category": "health"
+  },
+  {
+    "id": 155,
+    "romaji": "atama",
+    "hiragana": "あたま",
+    "english": "head",
+    "spanish": "cabeza",
+    "category": "health"
+  },
+  {
+    "id": 156,
+    "romaji": "ashi",
+    "hiragana": "あし",
+    "english": "leg/foot",
+    "spanish": "pierna/pie",
+    "category": "health"
+  },
+  {
+    "id": 157,
+    "romaji": "te",
+    "hiragana": "て",
+    "english": "hand",
+    "spanish": "mano",
+    "category": "health"
+  },
+  {
+    "id": 158,
+    "romaji": "me",
+    "hiragana": "め",
+    "english": "eye",
+    "spanish": "ojo",
+    "category": "health"
+  },
+  {
+    "id": 159,
+    "romaji": "mimi",
+    "hiragana": "みみ",
+    "english": "ear",
+    "spanish": "oreja",
+    "category": "health"
+  },
+  {
+    "id": 160,
+    "romaji": "hana",
+    "hiragana": "はな",
+    "english": "nose",
+    "spanish": "nariz",
+    "category": "health"
+  },
+  {
+    "id": 161,
+    "romaji": "kuchi",
+    "hiragana": "くち",
+    "english": "mouth",
+    "spanish": "boca",
+    "category": "health"
+  },
+  {
+    "id": 162,
+    "romaji": "fuku",
+    "hiragana": "ふく",
+    "english": "clothes",
+    "spanish": "ropa",
+    "category": "clothing"
+  },
+  {
+    "id": 163,
+    "romaji": "shatsu",
+    "hiragana": "シャツ",
+    "english": "shirt",
+    "spanish": "camisa",
+    "category": "clothing"
+  },
+  {
+    "id": 164,
+    "romaji": "zubon",
+    "hiragana": "ズボン",
+    "english": "pants",
+    "spanish": "pantalones",
+    "category": "clothing"
+  },
+  {
+    "id": 165,
+    "romaji": "kutsu",
+    "hiragana": "くつ",
+    "english": "shoes",
+    "spanish": "zapatos",
+    "category": "clothing"
+  },
+  {
+    "id": 166,
+    "romaji": "boushi",
+    "hiragana": "ぼうし",
+    "english": "hat",
+    "spanish": "sombrero",
+    "category": "clothing"
+  },
+  {
+    "id": 167,
+    "romaji": "doresu",
+    "hiragana": "ドレス",
+    "english": "dress",
+    "spanish": "vestido",
+    "category": "clothing"
+  },
+  {
+    "id": 168,
+    "romaji": "sukaato",
+    "hiragana": "スカート",
+    "english": "skirt",
+    "spanish": "falda",
+    "category": "clothing"
+  },
+  {
+    "id": 169,
+    "romaji": "jitensha",
+    "hiragana": "じてんしゃ",
+    "english": "bicycle",
+    "spanish": "bicicleta",
+    "category": "transportation"
+  },
+  {
+    "id": 170,
+    "romaji": "kuruma",
+    "hiragana": "くるま",
+    "english": "car",
+    "spanish": "coche",
+    "category": "transportation"
+  },
+  {
+    "id": 171,
+    "romaji": "densha",
+    "hiragana": "でんしゃ",
+    "english": "train",
+    "spanish": "tren",
+    "category": "transportation"
+  },
+  {
+    "id": 172,
+    "romaji": "basu",
+    "hiragana": "バス",
+    "english": "bus",
+    "spanish": "autobús",
+    "category": "transportation"
+  },
+  {
+    "id": 173,
+    "romaji": "hikouki",
+    "hiragana": "ひこうき",
+    "english": "airplane",
+    "spanish": "avión",
+    "category": "transportation"
+  },
+  {
+    "id": 174,
+    "romaji": "fune",
+    "hiragana": "ふね",
+    "english": "boat",
+    "spanish": "barco",
+    "category": "transportation"
+  },
+  {
+    "id": 175,
+    "romaji": "takushii",
+    "hiragana": "タクシー",
+    "english": "taxi",
+    "spanish": "taxi",
+    "category": "transportation"
+  },
+  {
+    "id": 176,
+    "romaji": "asa",
+    "hiragana": "あさ",
+    "english": "morning",
+    "spanish": "mañana",
+    "category": "time"
+  },
+  {
+    "id": 177,
+    "romaji": "hiru",
+    "hiragana": "ひる",
+    "english": "noon",
+    "spanish": "mediodía",
+    "category": "time"
+  },
+  {
+    "id": 178,
+    "romaji": "yoru",
+    "hiragana": "よる",
+    "english": "night",
+    "spanish": "noche",
+    "category": "time"
+  },
+  {
+    "id": 179,
+    "romaji": "kyou",
+    "hiragana": "きょう",
+    "english": "today",
+    "spanish": "hoy",
+    "category": "time"
+  },
+  {
+    "id": 180,
+    "romaji": "ashita",
+    "hiragana": "あした",
+    "english": "tomorrow",
+    "spanish": "mañana",
+    "category": "time"
+  },
+  {
+    "id": 181,
+    "romaji": "kinou",
+    "hiragana": "きのう",
+    "english": "yesterday",
+    "spanish": "ayer",
+    "category": "time"
+  },
+  {
+    "id": 182,
+    "romaji": "getsu-youbi",
+    "hiragana": "げつようび",
+    "english": "Monday",
+    "spanish": "lunes",
+    "category": "time"
+  },
+  {
+    "id": 183,
+    "romaji": "ka-youbi",
+    "hiragana": "かようび",
+    "english": "Tuesday",
+    "spanish": "martes",
+    "category": "time"
+  },
+  {
+    "id": 184,
+    "romaji": "sui-youbi",
+    "hiragana": "すいようび",
+    "english": "Wednesday",
+    "spanish": "miércoles",
+    "category": "time"
+  },
+  {
+    "id": 185,
+    "romaji": "moku-youbi",
+    "hiragana": "もくようび",
+    "english": "Thursday",
+    "spanish": "jueves",
+    "category": "time"
+  },
+  {
+    "id": 186,
+    "romaji": "kin-youbi",
+    "hiragana": "きんようび",
+    "english": "Friday",
+    "spanish": "viernes",
+    "category": "time"
+  },
+  {
+    "id": 187,
+    "romaji": "do-youbi",
+    "hiragana": "どようび",
+    "english": "Saturday",
+    "spanish": "sábado",
+    "category": "time"
+  },
+  {
+    "id": 188,
+    "romaji": "nichi-youbi",
+    "hiragana": "にちようび",
+    "english": "Sunday",
+    "spanish": "domingo",
+    "category": "time"
+  },
+  {
+    "id": 189,
+    "romaji": "kanjou",
+    "hiragana": "かんじょう",
+    "english": "emotion",
+    "spanish": "emoción",
+    "category": "emotions"
+  },
+  {
+    "id": 190,
+    "romaji": "ureshii",
+    "hiragana": "うれしい",
+    "english": "happy",
+    "spanish": "feliz",
+    "category": "emotions"
+  },
+  {
+    "id": 191,
+    "romaji": "kanashii",
+    "hiragana": "かなしい",
+    "english": "sad",
+    "spanish": "triste",
+    "category": "emotions"
+  },
+  {
+    "id": 192,
+    "romaji": "okotte",
+    "hiragana": "おこって",
+    "english": "angry",
+    "spanish": "enojado",
+    "category": "emotions"
+  },
+  {
+    "id": 193,
+    "romaji": "kowai",
+    "hiragana": "こわい",
+    "english": "scary",
+    "spanish": "aterrador",
+    "category": "emotions"
+  },
+  {
+    "id": 194,
+    "romaji": "tanoshii",
+    "hiragana": "たのしい",
+    "english": "fun",
+    "spanish": "divertido",
+    "category": "emotions"
+  },
+  {
+    "id": 195,
+    "romaji": "tsumaranai",
+    "hiragana": "つまらない",
+    "english": "boring",
+    "spanish": "aburrido",
+    "category": "emotions"
+  }
+]
