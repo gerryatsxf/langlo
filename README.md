@@ -2,7 +2,7 @@
 
 A beautiful, interactive flashcard system for learning Japanese vocabulary. This web application helps you memorize Japanese words across various categories with an intuitive card-flipping interface.
 
-🌐 **[Live Demo on GitHub Pages](https://YOUR_USERNAME.github.io/YOUR_REPOSITORY_NAME)**
+🌐 **[Live Demo on GitHub Pages](https://gerryatsxf.github.io/langlo)**
 
 ## Features
 
@@ -22,7 +22,7 @@ A beautiful, interactive flashcard system for learning Japanese vocabulary. This
 
 This app runs as a static website and can be accessed directly through GitHub Pages.
 
-**Live URL**: `https://YOUR_USERNAME.github.io/YOUR_REPOSITORY_NAME`
+**Live URL**: `https://gerryatsxf.github.io/langlo`
 
 ## Local Development
 
