@@ -57,6 +57,44 @@ body {
     text-align: center;
 }
 
+.download-stats-button {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    padding: 12px 20px !important;
+    border-radius: 12px !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 15px;
+    width: 100%;
+    font-family: 'Arial', sans-serif !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    outline: none;
+}
+
+.download-stats-button:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.download-stats-button:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.4);
+    outline-offset: 2px;
+}
+
+.download-stats-button:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .stats-list {
     display: flex;
     flex-direction: column;
@@ -134,14 +172,20 @@ body {
 
 .stat-number.correct {
     color: #27ae60;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2px 4px;
 }
 
 .stat-number.incorrect {
-    color: #e74c3c;
+    color: #ff4757;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2px 4px;
 }
 
 .stat-number.skipped {
     color: #f39c12;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2px 4px;
 }
 
 .stat-number.remaining {

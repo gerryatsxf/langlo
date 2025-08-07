@@ -195,6 +195,12 @@ class VocabularyCards {
         this.resetBtn.addEventListener('click', () => this.resetStats());
         this.flipDirectionBtn.addEventListener('click', () => this.toggleFlipDirection());
         
+        // Download stats button
+        const downloadStatsBtn = document.getElementById('downloadStatsBtn');
+        if (downloadStatsBtn) {
+            downloadStatsBtn.addEventListener('click', () => this.downloadStatsCSV());
+        }
+        
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             switch(e.key) {
@@ -975,6 +981,114 @@ class VocabularyCards {
                 this.resetBtn.textContent = originalText;
                 this.resetBtn.style.backgroundColor = '';
             }, 1000);
+        }
+    }
+
+    downloadStatsCSV() {
+        // Calculate stats per category for selected categories only
+        const categoryStats = {};
+        
+        this.availableCategories.forEach(category => {
+            if (this.selectedCategories.has(category)) {
+                const wordsInCategory = this.vocabulary.filter(word => word.category === category);
+                const filteredWordsInCategory = wordsInCategory.filter(word => 
+                    this.selectedCategories.has(word.category)
+                );
+                
+                let correct = 0;
+                let incorrect = 0;
+                let skipped = 0;
+                let unanswered = 0;
+                
+                filteredWordsInCategory.forEach(word => {
+                    const stat = this.wordStats.get(word.id);
+                    if (stat) {
+                        if (stat.correct === true) {
+                            correct++;
+                        } else if (stat.correct === false) {
+                            incorrect++;
+                        } else if (stat.skipped === true) {
+                            skipped++;
+                        } else {
+                            unanswered++;
+                        }
+                    } else {
+                        unanswered++;
+                    }
+                });
+                
+                if (filteredWordsInCategory.length > 0) {
+                    categoryStats[category] = {
+                        total: filteredWordsInCategory.length,
+                        correct,
+                        incorrect,
+                        skipped,
+                        unanswered,
+                        correctPercentage: ((correct / filteredWordsInCategory.length) * 100).toFixed(1),
+                        incorrectPercentage: ((incorrect / filteredWordsInCategory.length) * 100).toFixed(1),
+                        skippedPercentage: ((skipped / filteredWordsInCategory.length) * 100).toFixed(1),
+                        unansweredPercentage: ((unanswered / filteredWordsInCategory.length) * 100).toFixed(1)
+                    };
+                }
+            }
+        });
+
+        // Generate CSV content
+        let csvContent = 'Category,Total,Correct,Incorrect,Skipped,Remaining,Correct %,Incorrect %,Skipped %,Remaining %\n';
+        
+        Object.entries(categoryStats).forEach(([category, stats]) => {
+            const categoryName = this.t(category) || category;
+            csvContent += `"${categoryName}",${stats.total},${stats.correct},${stats.incorrect},${stats.skipped},${stats.unanswered},${stats.correctPercentage}%,${stats.incorrectPercentage}%,${stats.skippedPercentage}%,${stats.unansweredPercentage}%\n`;
+        });
+
+        // Calculate totals
+        const totalStats = Object.values(categoryStats).reduce((acc, stats) => ({
+            total: acc.total + stats.total,
+            correct: acc.correct + stats.correct,
+            incorrect: acc.incorrect + stats.incorrect,
+            skipped: acc.skipped + stats.skipped,
+            unanswered: acc.unanswered + stats.unanswered
+        }), { total: 0, correct: 0, incorrect: 0, skipped: 0, unanswered: 0 });
+
+        if (totalStats.total > 0) {
+            const totalCorrectPercentage = ((totalStats.correct / totalStats.total) * 100).toFixed(1);
+            const totalIncorrectPercentage = ((totalStats.incorrect / totalStats.total) * 100).toFixed(1);
+            const totalSkippedPercentage = ((totalStats.skipped / totalStats.total) * 100).toFixed(1);
+            const totalUnansweredPercentage = ((totalStats.unanswered / totalStats.total) * 100).toFixed(1);
+            
+            csvContent += `\n"TOTAL",${totalStats.total},${totalStats.correct},${totalStats.incorrect},${totalStats.skipped},${totalStats.unanswered},${totalCorrectPercentage}%,${totalIncorrectPercentage}%,${totalSkippedPercentage}%,${totalUnansweredPercentage}%\n`;
+        }
+
+        // Create and download the file
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const link = document.createElement('a');
+        
+        if (link.download !== undefined) {
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            
+            // Generate filename with current date
+            const now = new Date();
+            const dateStr = now.toISOString().split('T')[0]; // YYYY-MM-DD format
+            const timeStr = now.toTimeString().split(' ')[0].replace(/:/g, '-'); // HH-MM-SS format
+            link.setAttribute('download', `japanese-vocabulary-stats-${dateStr}-${timeStr}.csv`);
+            
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Show feedback
+            const downloadBtn = document.getElementById('downloadStatsBtn');
+            if (downloadBtn) {
+                const originalText = downloadBtn.textContent;
+                downloadBtn.textContent = '✓ Downloaded!';
+                downloadBtn.style.backgroundColor = 'rgba(39, 174, 96, 0.2)';
+                setTimeout(() => {
+                    downloadBtn.textContent = originalText;
+                    downloadBtn.style.backgroundColor = '';
+                }, 2000);
+            }
         }
     }
 }
