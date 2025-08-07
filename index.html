@@ -7,10 +7,16 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <title>Japanese Vocabulary Cards</title>
-    <link rel="stylesheet" href="styles.css?v=1.3.0">
+    <link rel="stylesheet" href="styles.css?v=1.4.9">
+    <script src="script.js?v=1.4.9"></script>
 </head>
 <body>
     <div class="app-layout">
+        <!-- Top Controls -->
+        <div class="top-site-controls" style="position: absolute; top: 10px; left: 10px; z-index: 1000;">
+            <button class="show-words-button" id="showWordsBtn" data-translate="show-all-words">📖 Show All Words</button>
+        </div>
+        
         <!-- Stats Sidebar -->
         <div class="stats-sidebar">
             <div class="stats-header" data-translate="statistics">Statistics</div>
@@ -87,22 +93,40 @@
         </div>
     </div>
 
-    <!-- Show All Words Button -->
-    <div class="show-words-container">
-        <button class="show-words-button" id="showWordsBtn" data-translate="show-all-words">📖 Show All Words</button>
-    </div>
-
     <!-- Words Modal -->
     <div class="words-modal" id="wordsModal">
         <div class="modal-content">
             <div class="modal-header">
                 <h2 data-translate="all-words-title">All Vocabulary Words</h2>
+                <div class="word-count-display">
+                    <span id="wordCount" data-translate="word-count">0 words</span>
+                </div>
                 <div class="modal-header-buttons">
                     <button class="download-words-button" id="downloadWordsBtn" data-translate="download-words">📥 Download Vocabulary</button>
                     <button class="close-modal" id="closeModalBtn">&times;</button>
                 </div>
             </div>
             <div class="modal-body">
+                <div class="table-controls">
+                    <div class="filter-section">
+                        <label for="categoryFilter" data-translate="filter-by-category">Filter by Category:</label>
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="" data-translate="all-categories">All Categories</option>
+                        </select>
+                    </div>
+                    <div class="search-section">
+                        <label for="searchInput" data-translate="search-words">Search Words:</label>
+                        <input type="text" id="searchInput" class="search-input" placeholder="Type to search..." data-translate-placeholder="search-placeholder">
+                    </div>
+                    <div class="sort-section">
+                        <label data-translate="sort-by">Sort by:</label>
+                        <button class="sort-btn" data-column="romaji" data-translate="sort-romaji">Romaji ↕</button>
+                        <button class="sort-btn" data-column="hiragana" data-translate="sort-japanese">Japanese ↕</button>
+                        <button class="sort-btn" data-column="english" data-translate="sort-english">English ↕</button>
+                        <button class="sort-btn" data-column="spanish" data-translate="sort-spanish">Spanish ↕</button>
+                        <button class="sort-btn" data-column="category" data-translate="sort-category">Category ↕</button>
+                    </div>
+                </div>
                 <div class="words-table-container">
                     <table class="words-table" id="wordsTable">
                         <thead>
@@ -123,7 +147,7 @@
         </div>
     </div>
 
-    <script src="script.js?v=1.3.0"></script>
+    <script src="script.js?v=1.4.9"></script>
     <script>
         // Development auto-reload functionality
         if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {

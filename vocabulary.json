@@ -1558,5 +1558,1413 @@
     "english": "boring",
     "spanish": "aburrido",
     "category": "emotions"
+  },
+  {
+    "id": 196,
+    "romaji": "Iran",
+    "hiragana": "イラン",
+    "english": "Iran",
+    "spanish": "Irán",
+    "category": "countries"
+  },
+  {
+    "id": 197,
+    "romaji": "Indo",
+    "hiragana": "インド",
+    "english": "India",
+    "spanish": "India",
+    "category": "countries"
+  },
+  {
+    "id": 198,
+    "romaji": "Indoneshia",
+    "hiragana": "インドネシア",
+    "english": "Indonesia",
+    "spanish": "Indonesia",
+    "category": "countries"
+  },
+  {
+    "id": 199,
+    "romaji": "Ejiputo",
+    "hiragana": "エジプト",
+    "english": "Egypt",
+    "spanish": "Egipto",
+    "category": "countries"
+  },
+  {
+    "id": 200,
+    "romaji": "Ōsutoraria",
+    "hiragana": "オーストラリア",
+    "english": "Australia",
+    "spanish": "Australia",
+    "category": "countries"
+  },
+  {
+    "id": 201,
+    "romaji": "Saujiarabia",
+    "hiragana": "サウジアラビア",
+    "english": "Saudi Arabia",
+    "spanish": "Arabia Saudí",
+    "category": "countries"
+  },
+  {
+    "id": 202,
+    "romaji": "Shingapōru",
+    "hiragana": "シンガポール",
+    "english": "Singapore",
+    "spanish": "Singapur",
+    "category": "countries"
+  },
+  {
+    "id": 203,
+    "romaji": "Supein",
+    "hiragana": "スペイン",
+    "english": "Spain",
+    "spanish": "España",
+    "category": "countries"
+  },
+  {
+    "id": 204,
+    "romaji": "Tai",
+    "hiragana": "タイ",
+    "english": "Thailand",
+    "spanish": "Tailandia",
+    "category": "countries"
+  },
+  {
+    "id": 205,
+    "romaji": "Chūgoku",
+    "hiragana": "チュウゴク",
+    "english": "China",
+    "spanish": "China",
+    "category": "countries"
+  },
+  {
+    "id": 206,
+    "romaji": "Nihon",
+    "hiragana": "ニホン",
+    "english": "Japan",
+    "spanish": "Japón",
+    "category": "countries"
+  },
+  {
+    "id": 207,
+    "romaji": "Firipin",
+    "hiragana": "フィリピン",
+    "english": "Philippines",
+    "spanish": "Filipinas",
+    "category": "countries"
+  },
+  {
+    "id": 208,
+    "romaji": "Burajiru",
+    "hiragana": "ブラジル",
+    "english": "Brazil",
+    "spanish": "Brasil",
+    "category": "countries"
+  },
+  {
+    "id": 209,
+    "romaji": "Betonamu",
+    "hiragana": "ベトナム",
+    "english": "Vietnam",
+    "spanish": "Vietnam",
+    "category": "countries"
+  },
+  {
+    "id": 210,
+    "romaji": "Marēshia",
+    "hiragana": "マレーシア",
+    "english": "Malaysia",
+    "spanish": "Malasia",
+    "category": "countries"
+  },
+  {
+    "id": 211,
+    "romaji": "Mekishiko",
+    "hiragana": "メキシコ",
+    "english": "Mexico",
+    "spanish": "México",
+    "category": "countries"
+  },
+  {
+    "id": 212,
+    "romaji": "Roshia",
+    "hiragana": "ロシア",
+    "english": "Russia",
+    "spanish": "Rusia",
+    "category": "countries"
+  },
+  {
+    "id": 213,
+    "romaji": "kaishain",
+    "hiragana": "かいしゃいん",
+    "english": "company employee",
+    "spanish": "empleado de empresa",
+    "category": "professions"
+  },
+  {
+    "id": 214,
+    "romaji": "kōmuin",
+    "hiragana": "こうむいん",
+    "english": "civil servant",
+    "spanish": "funcionario público",
+    "category": "professions"
+  },
+  {
+    "id": 215,
+    "romaji": "ekiin",
+    "hiragana": "えきいん",
+    "english": "station employee",
+    "spanish": "empleado de estación",
+    "category": "professions"
+  },
+  {
+    "id": 216,
+    "romaji": "ginkōin",
+    "hiragana": "ぎんこういん",
+    "english": "bank employee",
+    "spanish": "empleado bancario",
+    "category": "professions"
+  },
+  {
+    "id": 217,
+    "romaji": "yūbinkyokuin",
+    "hiragana": "ゆうびんきょくいん",
+    "english": "post office worker",
+    "spanish": "empleado de correos",
+    "category": "professions"
+  },
+  {
+    "id": 218,
+    "romaji": "ten'in",
+    "hiragana": "てんいん",
+    "english": "shop assistant",
+    "spanish": "dependiente",
+    "category": "professions"
+  },
+  {
+    "id": 219,
+    "romaji": "chōri-shi",
+    "hiragana": "ちょうりし",
+    "english": "cook",
+    "spanish": "cocinero",
+    "category": "professions"
+  },
+  {
+    "id": 220,
+    "romaji": "riyōshi",
+    "hiragana": "りようし",
+    "english": "barber",
+    "spanish": "barbero",
+    "category": "professions"
+  },
+  {
+    "id": 221,
+    "romaji": "kyōshi",
+    "hiragana": "きょうし",
+    "english": "teacher, professor",
+    "spanish": "profesor",
+    "category": "professions"
+  },
+  {
+    "id": 222,
+    "romaji": "bengoshi",
+    "hiragana": "べんごし",
+    "english": "lawyer",
+    "spanish": "abogado",
+    "category": "professions"
+  },
+  {
+    "id": 223,
+    "romaji": "kenkyūsha",
+    "hiragana": "けんきゅうしゃ",
+    "english": "researcher, investigator",
+    "spanish": "investigador",
+    "category": "professions"
+  },
+  {
+    "id": 224,
+    "romaji": "kangoshi",
+    "hiragana": "かんごし",
+    "english": "nurse",
+    "spanish": "enfermero/a",
+    "category": "professions"
+  },
+  {
+    "id": 225,
+    "romaji": "untenshu",
+    "hiragana": "うんてんしゅ",
+    "english": "driver",
+    "spanish": "conductor",
+    "category": "professions"
+  },
+  {
+    "id": 226,
+    "romaji": "keisatsu-kan",
+    "hiragana": "けいさつかん",
+    "english": "policeman, police officer",
+    "spanish": "policía",
+    "category": "professions"
+  },
+  {
+    "id": 227,
+    "romaji": "gaikokujin",
+    "hiragana": "がいこくじん",
+    "english": "diplomat",
+    "spanish": "diplomático",
+    "category": "professions"
+  },
+  {
+    "id": 228,
+    "romaji": "seijika",
+    "hiragana": "せいじか",
+    "english": "politician",
+    "spanish": "político",
+    "category": "professions"
+  },
+  {
+    "id": 229,
+    "romaji": "gaka",
+    "hiragana": "がか",
+    "english": "painter",
+    "spanish": "pintor",
+    "category": "professions"
+  },
+  {
+    "id": 230,
+    "romaji": "sakka",
+    "hiragana": "さっか",
+    "english": "novelist",
+    "spanish": "novelista",
+    "category": "professions"
+  },
+  {
+    "id": 231,
+    "romaji": "ongakuka",
+    "hiragana": "おんがくか",
+    "english": "musician",
+    "spanish": "músico",
+    "category": "professions"
+  },
+  {
+    "id": 232,
+    "romaji": "kenchikuka",
+    "hiragana": "けんちくか",
+    "english": "architect",
+    "spanish": "arquitecto",
+    "category": "professions"
+  },
+  {
+    "id": 233,
+    "romaji": "enjinia",
+    "hiragana": "エンジニア",
+    "english": "engineer",
+    "spanish": "ingeniero",
+    "category": "professions"
+  },
+  {
+    "id": 234,
+    "romaji": "dezainā",
+    "hiragana": "デザイナー",
+    "english": "designer, fashion designer",
+    "spanish": "diseñador",
+    "category": "professions"
+  },
+  {
+    "id": 235,
+    "romaji": "jānarisuto",
+    "hiragana": "ジャーナリスト",
+    "english": "journalist",
+    "spanish": "periodista",
+    "category": "professions"
+  },
+  {
+    "id": 236,
+    "romaji": "kashu",
+    "hiragana": "かしゅ",
+    "english": "singer",
+    "spanish": "cantante",
+    "category": "professions"
+  },
+  {
+    "id": 237,
+    "romaji": "haiyū",
+    "hiragana": "はいゆう",
+    "english": "actor",
+    "spanish": "actor",
+    "category": "professions"
+  },
+  {
+    "id": 238,
+    "romaji": "supōtsu senshu",
+    "hiragana": "スポーツせんしゅ",
+    "english": "athlete, sports person",
+    "spanish": "atleta",
+    "category": "professions"
+  },
+  {
+    "id": 239,
+    "romaji": "watashi",
+    "hiragana": "わたし",
+    "english": "I, me",
+    "spanish": "yo",
+    "category": "family"
+  },
+  {
+    "id": 240,
+    "romaji": "chichi",
+    "hiragana": "ちち",
+    "english": "(my) father",
+    "spanish": "(mi) padre",
+    "category": "family"
+  },
+  {
+    "id": 241,
+    "romaji": "haha",
+    "hiragana": "はは",
+    "english": "(my) mother",
+    "spanish": "(mi) madre",
+    "category": "family"
+  },
+  {
+    "id": 242,
+    "romaji": "ryōshin",
+    "hiragana": "りょうしん",
+    "english": "(my) parents",
+    "spanish": "(mis) padres",
+    "category": "family"
+  },
+  {
+    "id": 243,
+    "romaji": "sofu",
+    "hiragana": "そふ",
+    "english": "(my) grandfather",
+    "spanish": "(mi) abuelo",
+    "category": "family"
+  },
+  {
+    "id": 244,
+    "romaji": "sobo",
+    "hiragana": "そぼ",
+    "english": "(my) grandmother",
+    "spanish": "(mi) abuela",
+    "category": "family"
+  },
+  {
+    "id": 245,
+    "romaji": "sofubo",
+    "hiragana": "そふぼ",
+    "english": "(my) grandparents",
+    "spanish": "(mis) abuelos",
+    "category": "family"
+  },
+  {
+    "id": 246,
+    "romaji": "ani",
+    "hiragana": "あに",
+    "english": "(my) older brother",
+    "spanish": "(mi) hermano mayor",
+    "category": "family"
+  },
+  {
+    "id": 247,
+    "romaji": "ane",
+    "hiragana": "あね",
+    "english": "(my) older sister",
+    "spanish": "(mi) hermana mayor",
+    "category": "family"
+  },
+  {
+    "id": 248,
+    "romaji": "otōto",
+    "hiragana": "おとうと",
+    "english": "(my) younger brother",
+    "spanish": "(mi) hermano menor",
+    "category": "family"
+  },
+  {
+    "id": 249,
+    "romaji": "imōto",
+    "hiragana": "いもうと",
+    "english": "(my) younger sister",
+    "spanish": "(mi) hermana menor",
+    "category": "family"
+  },
+  {
+    "id": 250,
+    "romaji": "kyōdai",
+    "hiragana": "きょうだい",
+    "english": "(my) siblings",
+    "spanish": "(mis) hermanos",
+    "category": "family"
+  },
+  {
+    "id": 251,
+    "romaji": "otto",
+    "hiragana": "おっと",
+    "english": "(my) husband",
+    "spanish": "(mi) esposo",
+    "category": "family"
+  },
+  {
+    "id": 252,
+    "romaji": "tsuma",
+    "hiragana": "つま",
+    "english": "(my) wife",
+    "spanish": "(mi) esposa",
+    "category": "family"
+  },
+  {
+    "id": 253,
+    "romaji": "fūfu",
+    "hiragana": "ふうふ",
+    "english": "married couple",
+    "spanish": "pareja casada",
+    "category": "family"
+  },
+  {
+    "id": 254,
+    "romaji": "musuko",
+    "hiragana": "むすこ",
+    "english": "(my) son",
+    "spanish": "(mi) hijo",
+    "category": "family"
+  },
+  {
+    "id": 255,
+    "romaji": "musume",
+    "hiragana": "むすめ",
+    "english": "(my) daughter",
+    "spanish": "(mi) hija",
+    "category": "family"
+  },
+  {
+    "id": 256,
+    "romaji": "kodomo",
+    "hiragana": "こども",
+    "english": "(my) child/children",
+    "spanish": "(mi/mis) hijo/s",
+    "category": "family"
+  },
+  {
+    "id": 257,
+    "romaji": "Tanaka-san",
+    "hiragana": "たなかさん",
+    "english": "Mr. Tanaka",
+    "spanish": "Sr. Tanaka",
+    "category": "family"
+  },
+  {
+    "id": 258,
+    "romaji": "ojii-san",
+    "hiragana": "おじいさん",
+    "english": "grandfather",
+    "spanish": "abuelo",
+    "category": "family"
+  },
+  {
+    "id": 259,
+    "romaji": "obā-san",
+    "hiragana": "おばあさん",
+    "english": "grandmother",
+    "spanish": "abuela",
+    "category": "family"
+  },
+  {
+    "id": 260,
+    "romaji": "otō-san",
+    "hiragana": "おとうさん",
+    "english": "father",
+    "spanish": "padre",
+    "category": "family"
+  },
+  {
+    "id": 261,
+    "romaji": "okā-san",
+    "hiragana": "おかあさん",
+    "english": "mother",
+    "spanish": "madre",
+    "category": "family"
+  },
+  {
+    "id": 262,
+    "romaji": "onii-san",
+    "hiragana": "おにいさん",
+    "english": "older brother",
+    "spanish": "hermano mayor",
+    "category": "family"
+  },
+  {
+    "id": 263,
+    "romaji": "onē-san",
+    "hiragana": "おねえさん",
+    "english": "older sister",
+    "spanish": "hermana mayor",
+    "category": "family"
+  },
+  {
+    "id": 264,
+    "romaji": "otōto-san",
+    "hiragana": "おとうとさん",
+    "english": "younger brother",
+    "spanish": "hermano menor",
+    "category": "family"
+  },
+  {
+    "id": 265,
+    "romaji": "imōto-san",
+    "hiragana": "いもうとさん",
+    "english": "younger sister",
+    "spanish": "hermana menor",
+    "category": "family"
+  },
+  {
+    "id": 266,
+    "romaji": "gokazoku",
+    "hiragana": "ごかぞく",
+    "english": "(someone else's) family",
+    "spanish": "familia (de otros)",
+    "category": "family"
+  },
+  {
+    "id": 267,
+    "romaji": "goshujin",
+    "hiragana": "ごしゅじん",
+    "english": "(someone else's) husband",
+    "spanish": "esposo (de otros)",
+    "category": "family"
+  },
+  {
+    "id": 268,
+    "romaji": "okusan",
+    "hiragana": "おくさん",
+    "english": "(someone else's) wife",
+    "spanish": "esposa (de otros)",
+    "category": "family"
+  },
+  {
+    "id": 269,
+    "romaji": "musuko-san",
+    "hiragana": "むすこさん",
+    "english": "(someone else's) son",
+    "spanish": "hijo (de otros)",
+    "category": "family"
+  },
+  {
+    "id": 270,
+    "romaji": "musume-san",
+    "hiragana": "むすめさん",
+    "english": "(someone else's) daughter",
+    "spanish": "hija (de otros)",
+    "category": "family"
+  },
+  {
+    "id": 271,
+    "romaji": "okosan",
+    "hiragana": "おこさん",
+    "english": "(someone else's) child",
+    "spanish": "hijo/a (de otros)",
+    "category": "family"
+  },
+  {
+    "id": 272,
+    "romaji": "kore",
+    "hiragana": "これ",
+    "english": "this (near the speaker)",
+    "spanish": "esto (cerca del hablante)",
+    "category": "particles"
+  },
+  {
+    "id": 273,
+    "romaji": "sore",
+    "hiragana": "それ",
+    "english": "that (near the listener)",
+    "spanish": "eso (cerca del oyente)",
+    "category": "particles"
+  },
+  {
+    "id": 274,
+    "romaji": "are",
+    "hiragana": "あれ",
+    "english": "that (far from both)",
+    "spanish": "aquello (lejos de ambos)",
+    "category": "particles"
+  },
+  {
+    "id": 275,
+    "romaji": "nani",
+    "hiragana": "なに",
+    "english": "what",
+    "spanish": "qué",
+    "category": "particles"
+  },
+  {
+    "id": 276,
+    "romaji": "dare",
+    "hiragana": "だれ",
+    "english": "who",
+    "spanish": "quién",
+    "category": "particles"
+  },
+  {
+    "id": 277,
+    "romaji": "no",
+    "hiragana": "の",
+    "english": "possessive particle (of/belongs to)",
+    "spanish": "partícula posesiva (de/pertenece a)",
+    "category": "particles"
+  },
+  {
+    "id": 278,
+    "romaji": "nihongo",
+    "hiragana": "にほんご",
+    "english": "Japanese language",
+    "spanish": "idioma japonés",
+    "category": "particles"
+  },
+  {
+    "id": 279,
+    "romaji": "eigo",
+    "hiragana": "えいご",
+    "english": "English language",
+    "spanish": "idioma inglés",
+    "category": "particles"
+  },
+  {
+    "id": 280,
+    "romaji": "supeingo",
+    "hiragana": "スペインご",
+    "english": "Spanish language",
+    "spanish": "idioma español",
+    "category": "particles"
+  },
+  {
+    "id": 281,
+    "romaji": "ohayō gozaimasu",
+    "hiragana": "おはようございます",
+    "english": "good morning",
+    "spanish": "buenos días",
+    "category": "particles"
+  },
+  {
+    "id": 282,
+    "romaji": "konnichiwa",
+    "hiragana": "こんにちは",
+    "english": "hello/good afternoon",
+    "spanish": "hola/buenas tardes",
+    "category": "particles"
+  },
+  {
+    "id": 283,
+    "romaji": "konbanwa",
+    "hiragana": "こんばんは",
+    "english": "good evening",
+    "spanish": "buenas noches",
+    "category": "particles"
+  },
+  {
+    "id": 284,
+    "romaji": "oyasuminasai",
+    "hiragana": "おやすみなさい",
+    "english": "good night",
+    "spanish": "buenas noches",
+    "category": "particles"
+  },
+  {
+    "id": 285,
+    "romaji": "hajimemashō",
+    "hiragana": "はじめましょう",
+    "english": "let's begin",
+    "spanish": "empecemos",
+    "category": "particles"
+  },
+  {
+    "id": 286,
+    "romaji": "owarimashō",
+    "hiragana": "おわりましょう",
+    "english": "let's finish",
+    "spanish": "terminemos",
+    "category": "particles"
+  },
+  {
+    "id": 287,
+    "romaji": "hai, kekkō desu",
+    "hiragana": "はい、けっこうです",
+    "english": "yes, that's fine/okay",
+    "spanish": "sí, está bien",
+    "category": "particles"
+  },
+  {
+    "id": 288,
+    "romaji": "dewa",
+    "hiragana": "では",
+    "english": "well then",
+    "spanish": "entonces",
+    "category": "particles"
+  },
+  {
+    "id": 289,
+    "romaji": "sayōnara",
+    "hiragana": "さようなら",
+    "english": "goodbye",
+    "spanish": "adiós",
+    "category": "particles"
+  },
+  {
+    "id": 290,
+    "romaji": "arigatō gozaimasu",
+    "hiragana": "ありがとうございます",
+    "english": "thank you (polite)",
+    "spanish": "gracias (formal)",
+    "category": "particles"
+  },
+  {
+    "id": 291,
+    "romaji": "arigatō gozaimashita",
+    "hiragana": "ありがとうございました",
+    "english": "thank you (past polite)",
+    "spanish": "gracias (pasado formal)",
+    "category": "particles"
+  },
+  {
+    "id": 292,
+    "romaji": "sore wa dare no desu ka",
+    "hiragana": "それはだれのですか",
+    "english": "whose is that?",
+    "spanish": "¿de quién es eso?",
+    "category": "particles"
+  },
+  {
+    "id": 293,
+    "romaji": "watashi no desu",
+    "hiragana": "わたしのです",
+    "english": "it's mine",
+    "spanish": "es mío",
+    "category": "particles"
+  },
+  {
+    "id": 294,
+    "romaji": "zasshi",
+    "hiragana": "ざっし",
+    "english": "magazine",
+    "spanish": "revista",
+    "category": "daily-use"
+  },
+  {
+    "id": 295,
+    "romaji": "nōto",
+    "hiragana": "ノート",
+    "english": "notebook",
+    "spanish": "cuaderno",
+    "category": "daily-use"
+  },
+  {
+    "id": 296,
+    "romaji": "jisho",
+    "hiragana": "じしょ",
+    "english": "dictionary",
+    "spanish": "diccionario",
+    "category": "daily-use"
+  },
+  {
+    "id": 297,
+    "romaji": "techō",
+    "hiragana": "てちょう",
+    "english": "planner",
+    "spanish": "agenda",
+    "category": "daily-use"
+  },
+  {
+    "id": 298,
+    "romaji": "ajenda",
+    "hiragana": "アジェンダ",
+    "english": "agenda",
+    "spanish": "agenda",
+    "category": "daily-use"
+  },
+  {
+    "id": 299,
+    "romaji": "CD",
+    "hiragana": "シーディー",
+    "english": "CD",
+    "spanish": "CD",
+    "category": "daily-use"
+  },
+  {
+    "id": 300,
+    "romaji": "enpitsu",
+    "hiragana": "えんぴつ",
+    "english": "pencil",
+    "spanish": "lápiz",
+    "category": "daily-use"
+  },
+  {
+    "id": 301,
+    "romaji": "shāpupenshiru",
+    "hiragana": "シャープペンシル",
+    "english": "mechanical pencil",
+    "spanish": "portaminas",
+    "category": "daily-use"
+  },
+  {
+    "id": 302,
+    "romaji": "pen",
+    "hiragana": "ペン",
+    "english": "pen",
+    "spanish": "pluma",
+    "category": "daily-use"
+  },
+  {
+    "id": 303,
+    "romaji": "bōrupen",
+    "hiragana": "ボールペン",
+    "english": "ballpoint pen",
+    "spanish": "bolígrafo",
+    "category": "daily-use"
+  },
+  {
+    "id": 304,
+    "romaji": "keshigomu",
+    "hiragana": "けしごむ",
+    "english": "eraser",
+    "spanish": "borrador",
+    "category": "daily-use"
+  },
+  {
+    "id": 305,
+    "romaji": "rajio",
+    "hiragana": "ラジオ",
+    "english": "radio",
+    "spanish": "radio",
+    "category": "daily-use"
+  },
+  {
+    "id": 306,
+    "romaji": "kamera",
+    "hiragana": "カメラ",
+    "english": "camera",
+    "spanish": "cámara",
+    "category": "daily-use"
+  },
+  {
+    "id": 307,
+    "romaji": "sangurasu",
+    "hiragana": "サングラス",
+    "english": "sunglasses",
+    "spanish": "gafas de sol",
+    "category": "daily-use"
+  },
+  {
+    "id": 308,
+    "romaji": "tabako",
+    "hiragana": "たばこ",
+    "english": "cigarette/tobacco",
+    "spanish": "cigarrillo/tabaco",
+    "category": "daily-use"
+  },
+  {
+    "id": 309,
+    "romaji": "haizara",
+    "hiragana": "はいざら",
+    "english": "ashtray",
+    "spanish": "cenicero",
+    "category": "daily-use"
+  },
+  {
+    "id": 310,
+    "romaji": "matchi",
+    "hiragana": "マッチ",
+    "english": "match (for fire)",
+    "spanish": "cerillo",
+    "category": "daily-use"
+  },
+  {
+    "id": 311,
+    "romaji": "raitā",
+    "hiragana": "ライター",
+    "english": "lighter",
+    "spanish": "encendedor",
+    "category": "daily-use"
+  },
+  {
+    "id": 312,
+    "romaji": "tsukue",
+    "hiragana": "つくえ",
+    "english": "desk",
+    "spanish": "escritorio",
+    "category": "daily-use"
+  },
+  {
+    "id": 313,
+    "romaji": "isu",
+    "hiragana": "いす",
+    "english": "chair",
+    "spanish": "silla",
+    "category": "daily-use"
+  },
+  {
+    "id": 314,
+    "romaji": "kokuban",
+    "hiragana": "こくばん",
+    "english": "blackboard",
+    "spanish": "pizarra",
+    "category": "daily-use"
+  },
+  {
+    "id": 315,
+    "romaji": "doa",
+    "hiragana": "ドア",
+    "english": "door",
+    "spanish": "puerta",
+    "category": "daily-use"
+  },
+  {
+    "id": 316,
+    "romaji": "mado",
+    "hiragana": "まど",
+    "english": "window",
+    "spanish": "ventana",
+    "category": "daily-use"
+  },
+  {
+    "id": 317,
+    "romaji": "shashin",
+    "hiragana": "しゃしん",
+    "english": "photograph",
+    "spanish": "fotografía",
+    "category": "daily-use"
+  },
+  {
+    "id": 318,
+    "romaji": "hata",
+    "hiragana": "はた",
+    "english": "flag",
+    "spanish": "bandera",
+    "category": "daily-use"
+  },
+  {
+    "id": 319,
+    "romaji": "e",
+    "hiragana": "え",
+    "english": "picture/drawing",
+    "spanish": "dibujo",
+    "category": "daily-use"
+  },
+  {
+    "id": 320,
+    "romaji": "tēpu rekōdā",
+    "hiragana": "テープレコーダー",
+    "english": "tape recorder",
+    "spanish": "grabadora",
+    "category": "daily-use"
+  },
+  {
+    "id": 321,
+    "romaji": "hana",
+    "hiragana": "はな",
+    "english": "flower",
+    "spanish": "flor",
+    "category": "daily-use"
+  },
+  {
+    "id": 322,
+    "romaji": "ryōri",
+    "hiragana": "りょうり",
+    "english": "cooking/cuisine",
+    "spanish": "cocina/gastronomía",
+    "category": "daily-use"
+  },
+  {
+    "id": 323,
+    "romaji": "okane",
+    "hiragana": "おかね",
+    "english": "money",
+    "spanish": "dinero",
+    "category": "daily-use"
+  },
+  {
+    "id": 324,
+    "romaji": "omiyage",
+    "hiragana": "おみやげ",
+    "english": "souvenir/gift",
+    "spanish": "recuerdo/regalo",
+    "category": "daily-use"
+  },
+  {
+    "id": 325,
+    "romaji": "tesuto",
+    "hiragana": "テスト",
+    "english": "test",
+    "spanish": "examen",
+    "category": "daily-use"
+  },
+  {
+    "id": 326,
+    "romaji": "maru",
+    "hiragana": "まる",
+    "english": "circle/correct mark",
+    "spanish": "círculo/marca correcta",
+    "category": "daily-use"
+  },
+  {
+    "id": 327,
+    "romaji": "shimbun",
+    "hiragana": "しんぶん",
+    "english": "newspaper",
+    "spanish": "periódico",
+    "category": "daily-use"
+  },
+  {
+    "id": 328,
+    "romaji": "denwa",
+    "hiragana": "でんわ",
+    "english": "telephone",
+    "spanish": "teléfono",
+    "category": "daily-use"
+  },
+  {
+    "id": 329,
+    "romaji": "erebētā",
+    "hiragana": "エレベーター",
+    "english": "elevator",
+    "spanish": "ascensor",
+    "category": "daily-use"
+  },
+  {
+    "id": 330,
+    "romaji": "esukarētā",
+    "hiragana": "エスカレーター",
+    "english": "escalator",
+    "spanish": "escalera mecánica",
+    "category": "daily-use"
+  },
+  {
+    "id": 331,
+    "romaji": "kuni",
+    "hiragana": "くに",
+    "english": "country",
+    "spanish": "país",
+    "category": "daily-use"
+  },
+  {
+    "id": 332,
+    "romaji": "dochira",
+    "hiragana": "どちら",
+    "english": "which",
+    "spanish": "cuál",
+    "category": "daily-use"
+  },
+  {
+    "id": 333,
+    "romaji": "dewa arimasen",
+    "hiragana": "ではありません",
+    "english": "it is not",
+    "spanish": "no es",
+    "category": "daily-use"
+  },
+  {
+    "id": 334,
+    "romaji": "mo",
+    "hiragana": "も",
+    "english": "too",
+    "spanish": "también",
+    "category": "daily-use"
+  },
+  {
+    "id": 335,
+    "romaji": "mono",
+    "hiragana": "もの",
+    "english": "thing",
+    "spanish": "cosa",
+    "category": "daily-use"
+  },
+  {
+    "id": 336,
+    "romaji": "anata",
+    "hiragana": "あなた",
+    "english": "you",
+    "spanish": "tú",
+    "category": "daily-use"
+  },
+  {
+    "id": 337,
+    "romaji": "dōitashimashite",
+    "hiragana": "どういたしまして",
+    "english": "you're welcome",
+    "spanish": "de nada",
+    "category": "daily-use"
+  },
+  {
+    "id": 338,
+    "romaji": "doko",
+    "hiragana": "どこ",
+    "english": "where (informal)",
+    "spanish": "dónde (informal)",
+    "category": "daily-use"
+  },
+  {
+    "id": 339,
+    "romaji": "koko",
+    "hiragana": "ここ",
+    "english": "here (informal)",
+    "spanish": "aquí (informal)",
+    "category": "daily-use"
+  },
+  {
+    "id": 340,
+    "romaji": "soko",
+    "hiragana": "そこ",
+    "english": "there (informal)",
+    "spanish": "ahí (informal)",
+    "category": "daily-use"
+  },
+  {
+    "id": 341,
+    "romaji": "asoko",
+    "hiragana": "あそこ",
+    "english": "over there (informal)",
+    "spanish": "allá (informal)",
+    "category": "daily-use"
+  },
+  {
+    "id": 342,
+    "romaji": "kochira",
+    "hiragana": "こちら",
+    "english": "here (formal)",
+    "spanish": "aquí (formal)",
+    "category": "daily-use"
+  },
+  {
+    "id": 343,
+    "romaji": "sochira",
+    "hiragana": "そちら",
+    "english": "there (formal)",
+    "spanish": "ahí (formal)",
+    "category": "daily-use"
+  },
+  {
+    "id": 344,
+    "romaji": "achira",
+    "hiragana": "あちら",
+    "english": "over there (formal)",
+    "spanish": "allá (formal)",
+    "category": "daily-use"
+  },
+  {
+    "id": 345,
+    "romaji": "kara",
+    "hiragana": "から",
+    "english": "from",
+    "spanish": "de/desde",
+    "category": "daily-use"
+  },
+  {
+    "id": 346,
+    "romaji": "otearai",
+    "hiragana": "おてあらい",
+    "english": "toilet",
+    "spanish": "baño",
+    "category": "daily-use"
+  },
+  {
+    "id": 347,
+    "romaji": "toire",
+    "hiragana": "トイレ",
+    "english": "toilet",
+    "spanish": "baño",
+    "category": "daily-use"
+  },
+  {
+    "id": 348,
+    "romaji": "kyōshitsu",
+    "hiragana": "きょうしつ",
+    "english": "classroom",
+    "spanish": "salón de clases",
+    "category": "daily-use"
+  },
+  {
+    "id": 349,
+    "romaji": "oshigoto wa",
+    "hiragana": "おしごとは",
+    "english": "what's your job?",
+    "spanish": "¿cuál es tu trabajo?",
+    "category": "daily-use"
+  },
+  {
+    "id": 350,
+    "romaji": "kaidan",
+    "hiragana": "かいだん",
+    "english": "stairs",
+    "spanish": "escaleras",
+    "category": "daily-use"
+  },
+  {
+    "id": 351,
+    "romaji": "bangō",
+    "hiragana": "ばんごう",
+    "english": "number",
+    "spanish": "número",
+    "category": "daily-use"
+  },
+  {
+    "id": 352,
+    "romaji": "jimusho",
+    "hiragana": "じむしょ",
+    "english": "office",
+    "spanish": "oficina",
+    "category": "daily-use"
+  },
+  {
+    "id": 353,
+    "romaji": "shokudō",
+    "hiragana": "しょくどう",
+    "english": "cafeteria",
+    "spanish": "comedor",
+    "category": "daily-use"
+  },
+  {
+    "id": 354,
+    "romaji": "jidōhanbaiki",
+    "hiragana": "じどうはんばいき",
+    "english": "vending machine",
+    "spanish": "máquina expendedora",
+    "category": "daily-use"
+  },
+  {
+    "id": 355,
+    "romaji": "ni kai",
+    "hiragana": "にかい",
+    "english": "second floor",
+    "spanish": "segundo piso",
+    "category": "daily-use"
+  },
+  {
+    "id": 356,
+    "romaji": "ikkai",
+    "hiragana": "いっかい",
+    "english": "first floor",
+    "spanish": "primer piso",
+    "category": "daily-use"
+  },
+  {
+    "id": 357,
+    "romaji": "rokkai",
+    "hiragana": "ろっかい",
+    "english": "sixth floor",
+    "spanish": "sexto piso",
+    "category": "daily-use"
+  },
+  {
+    "id": 358,
+    "romaji": "chika",
+    "hiragana": "ちか",
+    "english": "basement",
+    "spanish": "sótano",
+    "category": "daily-use"
+  },
+  {
+    "id": 359,
+    "romaji": "peso",
+    "hiragana": "ペソ",
+    "english": "peso",
+    "spanish": "peso",
+    "category": "daily-use"
+  },
+  {
+    "id": 360,
+    "romaji": "doru",
+    "hiragana": "ドル",
+    "english": "dollar",
+    "spanish": "dólar",
+    "category": "daily-use"
+  },
+  {
+    "id": 361,
+    "romaji": "yūro",
+    "hiragana": "ユーロ",
+    "english": "euro",
+    "spanish": "euro",
+    "category": "daily-use"
+  },
+  {
+    "id": 362,
+    "romaji": "ikura desu ka",
+    "hiragana": "いくらですか",
+    "english": "how much?",
+    "spanish": "¿cuánto cuesta?",
+    "category": "daily-use"
+  },
+  {
+    "id": 363,
+    "romaji": "pasokon",
+    "hiragana": "パソコン",
+    "english": "personal computer",
+    "spanish": "computadora personal",
+    "category": "daily-use"
+  },
+  {
+    "id": 364,
+    "romaji": "to",
+    "hiragana": "と",
+    "english": "and (conjunction, only for nouns)",
+    "spanish": "y (conjunción, solo para sustantivos)",
+    "category": "daily-use"
+  },
+  {
+    "id": 365,
+    "romaji": "subete",
+    "hiragana": "すべて",
+    "english": "all",
+    "spanish": "todo",
+    "category": "daily-use"
+  },
+  {
+    "id": 366,
+    "romaji": "ningyō",
+    "hiragana": "にんぎょう",
+    "english": "doll",
+    "spanish": "muñeca",
+    "category": "daily-use"
+  },
+  {
+    "id": 367,
+    "romaji": "kurozetto",
+    "hiragana": "クロゼット",
+    "english": "closet",
+    "spanish": "clóset",
+    "category": "daily-use"
+  },
+  {
+    "id": 368,
+    "romaji": "wain",
+    "hiragana": "ワイン",
+    "english": "wine",
+    "spanish": "vino",
+    "category": "daily-use"
+  },
+  {
+    "id": 369,
+    "romaji": "uriba",
+    "hiragana": "うりば",
+    "english": "sales section, counter",
+    "spanish": "sección, mostrador",
+    "category": "daily-use"
+  },
+  {
+    "id": 370,
+    "romaji": "dōmo",
+    "hiragana": "どうも",
+    "english": "thanks",
+    "spanish": "gracias",
+    "category": "daily-use"
+  },
+  {
+    "id": 371,
+    "romaji": "dōzo",
+    "hiragana": "どうぞ",
+    "english": "here it is, please",
+    "spanish": "aquí está, por favor",
+    "category": "daily-use"
   }
 ]

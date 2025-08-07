@@ -8,6 +8,8 @@ class VocabularyCards {
         this.selectedCategories = new Set();
         this.availableCategories = [];
         this.cardDirection = 'jp-to-target'; // 'jp-to-target' or 'target-to-jp'
+        this.currentSort = null; // For table sorting
+        this.cardStatus = 'to-guess'; // to-guess, correct, incorrect, skipped
         
         // Tracking statistics
         this.wordStats = new Map(); // wordId -> {correct: boolean | null, skipped: boolean}
@@ -54,6 +56,10 @@ class VocabularyCards {
                 'transportation': 'Transportation',
                 'time': 'Time',
                 'emotions': 'Emotions',
+                'professions': 'Professions',
+                'family': 'Family',
+                'particles': 'Particles',
+                'daily-use': 'Daily Use',
                 'correct': '✓ Correct',
                 'incorrect': '✗ Incorrect',
                 'statistics': 'Statistics',
@@ -81,7 +87,18 @@ class VocabularyCards {
                 'spanish-header': 'Spanish',
                 'category-header': 'Category',
                 'download-words': '📥 Download Vocabulary',
-                'words-downloaded': '✓ Downloaded!'
+                'words-downloaded': '✓ Downloaded!',
+                // Table controls
+                'filter-by-category': 'Filter by Category:',
+                'all-categories': 'All Categories',
+                'search-words': 'Search Words:',
+                'search-placeholder': 'Type to search...',
+                'sort-by': 'Sort by:',
+                'sort-romaji': 'Romaji ↕',
+                'sort-japanese': 'Japanese ↕',
+                'sort-english': 'English ↕',
+                'sort-spanish': 'Spanish ↕',
+                'sort-category': 'Category ↕'
             },
             es: {
                 'title': '🎌 Vocabulario Japonés',
@@ -149,7 +166,23 @@ class VocabularyCards {
                 'spanish-header': 'Español',
                 'category-header': 'Categoría',
                 'download-words': '📥 Descargar Vocabulario',
-                'words-downloaded': '✓ ¡Descargado!'
+                'words-downloaded': '✓ ¡Descargado!',
+                // Table controls Spanish
+                'filter-by-category': 'Filtrar por Categoría:',
+                'all-categories': 'Todas las Categorías',
+                'search-words': 'Buscar Palabras:',
+                'search-placeholder': 'Escribe para buscar...',
+                'sort-by': 'Ordenar por:',
+                'sort-romaji': 'Romaji ↕',
+                'sort-japanese': 'Japonés ↕',
+                'sort-english': 'Inglés ↕',
+                'sort-spanish': 'Español ↕',
+                'sort-category': 'Categoría ↕',
+                // New categories
+                'professions': 'Profesiones',
+                'family': 'Familia',
+                'particles': 'Partículas',
+                'daily-use': 'Uso Diario'
             }
         };
         
@@ -592,6 +625,13 @@ class VocabularyCards {
         translatableElements.forEach(element => {
             const translationKey = element.getAttribute('data-translate');
             element.textContent = this.t(translationKey);
+        });
+        
+        // Update placeholder attributes
+        const placeholderElements = document.querySelectorAll('[data-translate-placeholder]');
+        placeholderElements.forEach(element => {
+            const translationKey = element.getAttribute('data-translate-placeholder');
+            element.placeholder = this.t(translationKey);
         });
         
         // Update status marker
@@ -1188,21 +1228,192 @@ class VocabularyCards {
 
     populateWordsTable() {
         const tableBody = document.getElementById('wordsTableBody');
-        if (!tableBody || !this.vocabulary) return;
+        const tableElement = document.getElementById('wordsTable');
+        if (!tableBody || !tableElement || !this.vocabulary) return;
 
         // Clear existing content
         tableBody.innerHTML = '';
 
-        // Sort vocabulary by category and then by romaji
-        const sortedVocabulary = [...this.vocabulary].sort((a, b) => {
-            if (a.category !== b.category) {
-                return a.category.localeCompare(b.category);
+        // Initialize table header if not exists
+        this.initializeTableHeader(tableElement);
+
+        // Initialize filters and controls
+        this.initializeTableControls();
+
+        // Apply current filters and sorting
+        this.applyFiltersAndSorting();
+    }
+
+    initializeTableHeader(tableElement) {
+        let thead = tableElement.querySelector('thead');
+        if (!thead) {
+            thead = document.createElement('thead');
+            const headerRow = document.createElement('tr');
+            
+            const headers = [
+                { key: 'romaji-header', text: 'Romaji' },
+                { key: 'japanese-header', text: 'Japanese' },
+                { key: 'english-header', text: 'English' },
+                { key: 'spanish-header', text: 'Spanish' },
+                { key: 'category-header', text: 'Category' }
+            ];
+
+            headers.forEach(header => {
+                const th = document.createElement('th');
+                th.setAttribute('data-translate', header.key);
+                th.textContent = header.text;
+                headerRow.appendChild(th);
+            });
+
+            thead.appendChild(headerRow);
+            tableElement.insertBefore(thead, tableElement.firstChild);
+        }
+    }
+
+    initializeTableControls() {
+        // Initialize category filter
+        this.populateCategoryFilter();
+
+        // Add event listeners
+        this.addTableControlListeners();
+    }
+
+    populateCategoryFilter() {
+        const categoryFilter = document.getElementById('categoryFilter');
+        if (!categoryFilter || !this.vocabulary) return;
+
+        // Get unique categories
+        const categories = [...new Set(this.vocabulary.map(word => word.category))].sort();
+
+        // Clear existing options (except "All Categories")
+        while (categoryFilter.children.length > 1) {
+            categoryFilter.removeChild(categoryFilter.lastChild);
+        }
+
+        // Add category options
+        categories.forEach(category => {
+            const option = document.createElement('option');
+            option.value = category;
+            option.textContent = this.t(category) || category;
+            categoryFilter.appendChild(option);
+        });
+    }
+
+    addTableControlListeners() {
+        // Category filter
+        const categoryFilter = document.getElementById('categoryFilter');
+        if (categoryFilter) {
+            categoryFilter.addEventListener('change', () => this.applyFiltersAndSorting());
+        }
+
+        // Search input
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput) {
+            searchInput.addEventListener('input', () => this.applyFiltersAndSorting());
+        }
+
+        // Sort buttons
+        const sortButtons = document.querySelectorAll('.sort-btn');
+        sortButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const column = e.target.getAttribute('data-column');
+                this.toggleSort(column, e.target);
+            });
+        });
+    }
+
+    toggleSort(column, button) {
+        // Reset other sort buttons
+        document.querySelectorAll('.sort-btn').forEach(btn => {
+            if (btn !== button) {
+                btn.classList.remove('active');
+                btn.innerHTML = btn.innerHTML.replace('↑', '↕').replace('↓', '↕');
             }
-            return a.romaji.localeCompare(b.romaji);
         });
 
-        // Populate table with all words
-        sortedVocabulary.forEach(word => {
+        // Toggle current sort
+        if (!this.currentSort || this.currentSort.column !== column) {
+            this.currentSort = { column: column, direction: 'asc' };
+            button.classList.add('active');
+            button.innerHTML = button.innerHTML.replace('↕', '↑').replace('↓', '↑');
+        } else if (this.currentSort.direction === 'asc') {
+            this.currentSort.direction = 'desc';
+            button.innerHTML = button.innerHTML.replace('↑', '↓');
+        } else {
+            this.currentSort = null;
+            button.classList.remove('active');
+            button.innerHTML = button.innerHTML.replace('↓', '↕');
+        }
+
+        this.applyFiltersAndSorting();
+    }
+
+    applyFiltersAndSorting() {
+        if (!this.vocabulary) return;
+
+        let filteredWords = [...this.vocabulary];
+
+        // Apply category filter
+        const categoryFilter = document.getElementById('categoryFilter');
+        if (categoryFilter && categoryFilter.value) {
+            filteredWords = filteredWords.filter(word => word.category === categoryFilter.value);
+        }
+
+        // Apply search filter
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput && searchInput.value.trim()) {
+            const searchTerm = searchInput.value.trim().toLowerCase();
+            filteredWords = filteredWords.filter(word => 
+                word.romaji.toLowerCase().includes(searchTerm) ||
+                word.hiragana.toLowerCase().includes(searchTerm) ||
+                word.english.toLowerCase().includes(searchTerm) ||
+                word.spanish.toLowerCase().includes(searchTerm) ||
+                word.category.toLowerCase().includes(searchTerm)
+            );
+        }
+
+        // Apply sorting
+        if (this.currentSort) {
+            const { column, direction } = this.currentSort;
+            filteredWords.sort((a, b) => {
+                let aVal = a[column] || '';
+                let bVal = b[column] || '';
+                
+                // Special handling for category to use translated names
+                if (column === 'category') {
+                    aVal = this.t(aVal) || aVal;
+                    bVal = this.t(bVal) || bVal;
+                }
+
+                const comparison = aVal.localeCompare(bVal);
+                return direction === 'asc' ? comparison : -comparison;
+            });
+        } else {
+            // Default sorting: by category, then by romaji
+            filteredWords.sort((a, b) => {
+                if (a.category !== b.category) {
+                    return a.category.localeCompare(b.category);
+                }
+                return a.romaji.localeCompare(b.romaji);
+            });
+        }
+
+        // Populate table with filtered and sorted data
+        this.renderTableRows(filteredWords);
+    }
+
+    renderTableRows(words) {
+        const tableBody = document.getElementById('wordsTableBody');
+        if (!tableBody) return;
+
+        // Clear existing content
+        tableBody.innerHTML = '';
+
+        // Update word count
+        this.updateWordCount(words.length);
+
+        // Populate table with words
+        words.forEach(word => {
             const row = document.createElement('tr');
             
             // Romaji column
@@ -1237,6 +1448,16 @@ class VocabularyCards {
             
             tableBody.appendChild(row);
         });
+    }
+
+    updateWordCount(count) {
+        const wordCountElement = document.getElementById('wordCount');
+        if (wordCountElement) {
+            const countText = this.currentLanguage === 'es' ? 
+                `${count} palabra${count !== 1 ? 's' : ''}` : 
+                `${count} word${count !== 1 ? 's' : ''}`;
+            wordCountElement.textContent = countText;
+        }
     }
 
     downloadWordsCSV() {
