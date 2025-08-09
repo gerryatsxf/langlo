@@ -98,7 +98,26 @@ class VocabularyCards {
                 'sort-japanese': 'Japanese ↕',
                 'sort-english': 'English ↕',
                 'sort-spanish': 'Spanish ↕',
-                'sort-category': 'Category ↕'
+                'sort-category': 'Category ↕',
+                // Keyboard shortcuts
+                'keyboard-shortcuts': '⌨️ Keyboard Shortcuts',
+                'flip-card-desc': 'Flip Card',
+                'previous-card-desc': 'Previous Card',
+                'next-card-desc': 'Next Card',
+                'shuffle-desc': 'Shuffle',
+                'correct-desc': 'Mark Correct',
+                'incorrect-desc': 'Mark Incorrect',
+                'reset-desc': 'Reset Progress',
+                'language-desc': 'Toggle Language',
+                // Word count
+                'word-count': '0 words',
+                'words-singular': 'word',
+                'words-plural': 'words',
+                // Notification messages
+                'marked-correct': '✓ Marked as correct!',
+                'marked-incorrect': '✗ Marked as incorrect!',
+                'card-skipped': '⏭️ Card skipped',
+                'previous-card': '⬅️ Previous card'
             },
             es: {
                 'title': '🎌 Vocabulario Japonés',
@@ -182,7 +201,26 @@ class VocabularyCards {
                 'professions': 'Profesiones',
                 'family': 'Familia',
                 'particles': 'Partículas',
-                'daily-use': 'Uso Diario'
+                'daily-use': 'Uso Diario',
+                // Keyboard shortcuts
+                'keyboard-shortcuts': '⌨️ Atajos de Teclado',
+                'flip-card-desc': 'Voltear Tarjeta',
+                'previous-card-desc': 'Tarjeta Anterior',
+                'next-card-desc': 'Siguiente Tarjeta',
+                'shuffle-desc': 'Mezclar',
+                'correct-desc': 'Marcar Correcto',
+                'incorrect-desc': 'Marcar Incorrecto',
+                'reset-desc': 'Reiniciar Progreso',
+                'language-desc': 'Cambiar Idioma',
+                // Word count
+                'word-count': '0 palabras',
+                'words-singular': 'palabra',
+                'words-plural': 'palabras',
+                // Notification messages
+                'marked-correct': '✓ ¡Marcado como correcto!',
+                'marked-incorrect': '✗ ¡Marcado como incorrecto!',
+                'card-skipped': '⏭️ Tarjeta omitida',
+                'previous-card': '⬅️ Tarjeta anterior'
             }
         };
         
@@ -339,6 +377,26 @@ class VocabularyCards {
                     e.preventDefault();
                     this.shuffleCards();
                     break;
+                case 'c':
+                case 'C':
+                    e.preventDefault();
+                    this.markWord(true);
+                    break;
+                case 'x':
+                case 'X':
+                    e.preventDefault();
+                    this.markWord(false);
+                    break;
+                case 'r':
+                case 'R':
+                    e.preventDefault();
+                    this.resetStats();
+                    break;
+                case 'l':
+                case 'L':
+                    e.preventDefault();
+                    this.toggleLanguage();
+                    break;
             }
         });
     }
@@ -470,6 +528,9 @@ class VocabularyCards {
             this.displayCard();
             this.updateProgress();
             this.addCardTransition('slide-right');
+            
+            // Show notification for previous card
+            this.showNotification(this.t('previous-card'), 'previous');
         }
     }
 
@@ -538,14 +599,27 @@ class VocabularyCards {
         }, 300);
     }
     
-    showNotification(message) {
+    showNotification(message, type = 'success') {
         // Create notification element
         const notification = document.createElement('div');
+        
+        // Define colors for different notification types
+        const colors = {
+            success: '#27ae60',    // Green for general success
+            correct: '#27ae60',    // Green for correct answers
+            incorrect: '#e74c3c',  // Red for incorrect answers
+            skip: '#f39c12',       // Orange for skipped cards
+            previous: '#3498db',   // Blue for previous navigation
+            info: '#3498db'        // Blue for general info
+        };
+        
+        const backgroundColor = colors[type] || colors.success;
+        
         notification.style.cssText = `
             position: fixed;
             top: 20px;
             right: 20px;
-            background: #27ae60;
+            background: ${backgroundColor};
             color: white;
             padding: 12px 20px;
             border-radius: 8px;
@@ -553,6 +627,7 @@ class VocabularyCards {
             z-index: 1000;
             transform: translateX(100%);
             transition: transform 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         `;
         notification.textContent = message;
         
@@ -825,8 +900,9 @@ class VocabularyCards {
         this.updateNavigationButtons(); // Update button text immediately
         
         // Show notification
-        const message = isCorrect ? '✓ Marked as correct!' : '✗ Marked as incorrect!';
-        this.showNotification(message);
+        const message = isCorrect ? this.t('marked-correct') : this.t('marked-incorrect');
+        const notificationType = isCorrect ? 'correct' : 'incorrect';
+        this.showNotification(message, notificationType);
         
         // Auto-advance to next unanswered card after marking
         setTimeout(() => {
@@ -887,6 +963,9 @@ class VocabularyCards {
             // No longer saving to localStorage
             this.updateStats();
             this.updateCardStatus(); // Update status marker when marked as skipped
+            
+            // Show notification for skipped card
+            this.showNotification(this.t('card-skipped'), 'skip');
         }
     }
     

@@ -66,14 +66,69 @@
             </div>
 
             <div class="controls" style="margin-top: 15px;">
-                <button class="btn btn-correct" id="correctBtn" data-translate="correct">✓ Correct</button>
                 <button class="btn btn-incorrect" id="incorrectBtn" data-translate="incorrect">✗ Incorrect</button>
+                <button class="btn btn-correct" id="correctBtn" data-translate="correct">✓ Correct</button>
             </div>
 
             <div class="progress">
                 <div><span data-translate="card">Card</span> <span id="currentCard">1</span> <span data-translate="of">of</span> <span id="totalCards">12</span></div>
                 <div class="progress-bar">
                     <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <!-- Keyboard Controls -->
+            <div class="keyboard-controls">
+                <div class="controls-header" data-translate="keyboard-shortcuts">⌨️ Keyboard Shortcuts</div>
+                <div class="controls-grid">
+                    <div class="control-item">
+                        <div class="key-combo">
+                            <span class="key">Space</span>
+                        </div>
+                        <span class="control-desc" data-translate="flip-card-desc">Flip Card</span>
+                    </div>
+                    <div class="control-item">
+                        <div class="key-combo">
+                            <span class="key">←</span>
+                        </div>
+                        <span class="control-desc" data-translate="previous-card-desc">Previous Card</span>
+                    </div>
+                    <div class="control-item">
+                        <div class="key-combo">
+                            <span class="key">→</span>
+                        </div>
+                        <span class="control-desc" data-translate="next-card-desc">Next Card</span>
+                    </div>
+                    <div class="control-item">
+                        <div class="key-combo">
+                            <span class="key">S</span>
+                        </div>
+                        <span class="control-desc" data-translate="shuffle-desc">Shuffle</span>
+                    </div>
+                    <div class="control-item">
+                        <div class="key-combo">
+                            <span class="key">C</span>
+                        </div>
+                        <span class="control-desc" data-translate="correct-desc">Mark Correct</span>
+                    </div>
+                    <div class="control-item">
+                        <div class="key-combo">
+                            <span class="key">X</span>
+                        </div>
+                        <span class="control-desc" data-translate="incorrect-desc">Mark Incorrect</span>
+                    </div>
+                    <div class="control-item">
+                        <div class="key-combo">
+                            <span class="key">R</span>
+                        </div>
+                        <span class="control-desc" data-translate="reset-desc">Reset Progress</span>
+                    </div>
+                    <div class="control-item">
+                        <div class="key-combo">
+                            <span class="key">L</span>
+                        </div>
+                        <span class="control-desc" data-translate="language-desc">Toggle Language</span>
+                    </div>
                 </div>
             </div>
         </div>
